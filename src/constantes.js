@@ -27,15 +27,15 @@ export const misApellidos="Zemmari Kissani";
 
 export const navLinks = [
     {
-        id: "about",
+        id: "sobre_mi",
         title: "Sobre mi",
     },
     {
-        id: "work",
+        id: "mis_trabajos",
         title: "Trabajos",
     },
     {
-        id: "contact",
+        id: "contacto",
         title: "Contacto",
     },
 ];
