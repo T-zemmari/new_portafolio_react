@@ -21,6 +21,10 @@ import {
     tmEscapadeImage,
 } from "./assets/imgs";
 
+
+export const miNombre='Tarek';
+export const misApellidos="Zemmari Kissani";
+
 export const navLinks = [
     {
         id: "about",
