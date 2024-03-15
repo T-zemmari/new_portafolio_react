@@ -32,6 +32,7 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import miImagenUno from "./yo_1.png";
 
 export {
   tedyBusiness,
@@ -65,4 +66,5 @@ export {
   jobit,
   tripguide,
   tmEscapadeImage,
+  miImagenUno,
 };

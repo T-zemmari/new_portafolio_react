@@ -19,11 +19,13 @@ import {
     tedyBusiness,
     matchReady,
     tmEscapadeImage,
+    miImagenUno,
 } from "./assets/imgs";
 
 
 export const miNombre='Tarek';
 export const misApellidos="Zemmari Kissani";
+export const miImagUno=miImagenUno;
 
 export const navLinks = [
     {
