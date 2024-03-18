@@ -7,5 +7,10 @@ export default {
   theme: {
     extend: {},
   },
+  variants: {
+    extend: {
+      flexDirection: ['responsive', 'hover', 'focus', 'sm'],
+    },
+  },
   plugins: [],
 }
