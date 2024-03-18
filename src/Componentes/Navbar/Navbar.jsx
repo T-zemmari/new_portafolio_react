@@ -1,7 +1,7 @@
 import  { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { styles } from "../../styles";
+import { my_styles } from "../../my_styles";
 import { navLinks ,misApellidos,miNombre} from "../../constantes.js";
 import { logo, menu, close } from "../../assets/imgs";
 
@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <nav
       className={`${
-        styles.paddingX
+        my_styles.paddingX
       } w-full flex items-center py-5 fixed top-0 z-20 ${
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
