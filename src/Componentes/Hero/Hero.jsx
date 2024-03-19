@@ -1,6 +1,7 @@
 import { my_styles } from "../../my_styles.js";
 import { miImagUno } from "../../constantes.js";
 import ButtonTwo from "../ButtonTwo/ButtonTwo.jsx";
+import {motion} from "framer-motion";
 
 const Hero = () => {
   return (
@@ -14,7 +15,17 @@ const Hero = () => {
 
         <div>
           <h1 className={`${my_styles.heroHeadText} text-white`}>
-            Hola, Soy <span className="text-[#915EFF]">Tarek</span>
+            Hola, Soy <motion.span 
+            initial={{ 
+              color: "#fff",
+             }}
+            transition={{duration:1}}
+            animate={{ 
+              color:'#915EFF',
+
+            }}
+            >Tarek
+            </motion.span>
           </h1>
           <p className={`${my_styles.heroSubText} text-white-200 mt-10`}>
             Programador y desarrollador full stack,
