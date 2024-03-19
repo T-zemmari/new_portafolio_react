@@ -32,7 +32,7 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-import miImagenUno from "./mis_fotos/yo_4.png";
+import miImagenUno from "./mis_fotos/yo_5.png";
 
 export {
   tedyBusiness,
