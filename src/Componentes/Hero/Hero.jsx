@@ -7,7 +7,7 @@ import MenuToggleOne from "../MenuToggleOne/MenuToggleOne.jsx";
 const Hero = () => {
   return (
     <>
-    <section className={`w-full min-h-full mt-28 py-0 flex flex-col md:flex-row md:items-start lg:px-5 lg:mt-32 lg:p[120px] `}>
+    <section id="hero_container" className={`w-full min-h-full mt-28 py-0 flex flex-col md:flex-row md:items-start lg:px-5 lg:mt-32 lg:p[120px] `}>
       <div className={`w-full h-5/6 flex flex-row items-start justify-center gap-5 sm:w-3/6 lg:w-3/6 ${my_styles.paddingX} `}>
         <div className={`flex flex-col justify-start items-center `}>
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
