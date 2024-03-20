@@ -45,7 +45,7 @@ const Navbar = () => {
         my_styles.paddingX
       } w-full flex items-center py-5 fixed top-0 z-20 ${
         scrolled ? "bg-primary" : "bg-transparent"
-      } ${reachedHero ? "bg-[#7f7ce1]" : ""}`}
+      } ${reachedHero ? "bg-[#161455]" : ""}`}
     >
       <div className="w-full flex justify-between items-center  mx-auto">
         <Link
@@ -102,7 +102,7 @@ const Navbar = () => {
                     setActive(nav.title);
                   }}
                 >
-                  <a className="text-white" href={`#${nav.id}`}>
+                  <a className={`text-white`} href={`#${nav.id}`}>
                     {nav.title}
                   </a>
                 </li>
