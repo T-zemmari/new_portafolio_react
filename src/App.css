@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .contendor_app {
   display: flex;
   justify-content: flex-start;

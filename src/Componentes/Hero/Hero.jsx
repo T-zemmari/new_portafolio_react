@@ -2,6 +2,7 @@ import { my_styles } from "../../my_styles.js";
 import { miImagUno } from "../../constantes.js";
 import ButtonTwo from "../ButtonTwo/ButtonTwo.jsx";
 import {motion} from "framer-motion";
+import MenuToggleOne from "../MenuToggleOne/MenuToggleOne.jsx";
 
 const Hero = () => {
   return (
@@ -42,6 +43,10 @@ const Hero = () => {
       <div className={`w-full sm:w-3/6 lg:w-3/6 h-6/6 ${my_styles.paddingX} md:-mt-0  flex flex-row justify-center items-start`}>
         <div className={`contenedor_imagnen w-[55rem] max-w-96 h-96 md:mt-0 border border-indigo-600 rounded-full bg-[url('${miImagUno}')]  bg-center bg-cover bg-no-repeat`} style={{backgroundImage:`url(${miImagUno})`}}></div>
       </div>
+
+    </section>
+    <section className={`w-full h-[300px]`}>
+      <MenuToggleOne/>
     </section>
     </>
   );
