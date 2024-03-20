@@ -20,12 +20,21 @@ import {
     matchReady,
     tmEscapadeImage,
     miImagenUno,
+    icnContact,
+    icnExper,
+    icnTitul,
+    icnWorks,
 } from "./assets/imgs";
 
 
 export const miNombre='Tarek';
 export const misApellidos="Zemmari Kissani";
 export const miImagUno=miImagenUno;
+
+export const icnContact1=icnContact;
+export const icnExper1=icnExper;
+export const icnTitul1=icnTitul;
+export const icnWorks1=icnWorks;
 
 export const navLinks = [
     {
