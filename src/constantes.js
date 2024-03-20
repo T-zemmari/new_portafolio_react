@@ -24,6 +24,7 @@ import {
     icnExper,
     icnTitul,
     icnWorks,
+    bgWaveOne,
 } from "./assets/imgs";
 
 
@@ -35,6 +36,8 @@ export const icnContact1=icnContact;
 export const icnExper1=icnExper;
 export const icnTitul1=icnTitul;
 export const icnWorks1=icnWorks;
+
+export const bgWave1=bgWaveOne;
 
 export const navLinks = [
     {

@@ -39,6 +39,8 @@ import icnExper from "../icons/icn_cont_experiencias_1.png";
 import icnTitul from "../icons/icn_cont_titulos_2.png";
 import icnWorks from "../icons/icn_cont_trabajos_2.png";
 
+import bgWaveOne from "../imgs/bgWave3.png";
+
 export {
   tedyBusiness,
   matchReady,
@@ -76,4 +78,5 @@ export {
   icnExper,
   icnTitul,
   icnWorks,
+  bgWaveOne,
 };
