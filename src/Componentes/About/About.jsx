@@ -1,23 +1,51 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./About.css";
 
 const About = () => {
   const [displayText, setDisplayText] = useState("");
-  const text =
-    "Soy un desarrollador apasionado con experiencia en React, PHP y otras tecnologías.";
+  const cardRefs = useRef([]);
+  const [borderIntensities, setBorderIntensities] = useState([0, 0, 0]);
+
+  const handleMouseMove = (event, index) => {
+    const cardRect = cardRefs.current[index].getBoundingClientRect();
+    const offsetX = Math.abs(event.clientX - cardRect.left);
+    const offsetY = Math.abs(event.clientY - cardRect.top);
+    const distanceFromBorder = Math.min(offsetX, offsetY);
+    const maxDistance = Math.sqrt(
+      Math.pow(cardRect.width / 2, 2) + Math.pow(cardRect.height / 2, 2)
+    );
+    const intensity = 1 - distanceFromBorder / maxDistance;
+    setBorderIntensities((prevIntensities) => {
+      const newIntensities = [...prevIntensities];
+      newIntensities[index] = intensity;
+      return newIntensities;
+    });
+  };
+
+  const handleMouseLeave = (index) => {
+    setBorderIntensities((prevIntensities) => {
+      const newIntensities = [...prevIntensities];
+      newIntensities[index] = 0; // Restablecer la intensidad del borde
+      return newIntensities;
+    });
+  };
 
   useEffect(() => {
-    let currentIndex = 0;
     const interval = setInterval(() => {
-      if (currentIndex <= text.length) {
-        setDisplayText(text.substring(0, currentIndex).toLocaleUpperCase());
-        currentIndex++;
-      } else {
-        clearInterval(interval);
-      }
+      setDisplayText((prevText) => {
+        if (prevText.length < text.length) {
+          return text.substring(0, prevText.length + 1).toLocaleUpperCase();
+        } else {
+          clearInterval(interval);
+          return prevText;
+        }
+      });
     }, 30);
     return () => clearInterval(interval);
   }, []);
+
+  const text =
+    "Soy un desarrollador apasionado con experiencia en React, PHP y otras tecnologías.";
 
   const texto_1 = `
     <p class="text-white">
@@ -41,31 +69,30 @@ const About = () => {
   `;
 
   const addLineBreaks = (text) => {
-    // Añadir un salto de línea después de cada punto
     return text.replace(/\.\s+/g, ".<br/>");
   };
 
   const cardsData = [
     {
       color: "#262726",
-      //borderColor: "#FF0040", // Rojo eléctrico
-      borderColor: "#ff004061", 
+      borderColor: "#ff00407a",
       content: addLineBreaks(texto_1),
       title: "FRONTEND",
+      boxShadow:'#ff0040db',
     },
     {
       color: "#262726",
-      //borderColor: "#00FFFF", // Azul eléctrico
       borderColor: "#00ffff4f",
       content: addLineBreaks(texto_2),
       title: "BACKEND",
+      boxShadow:'#00ffffb3',
     },
     {
       color: "#262726",
-      //borderColor: "#FF00FF", // Violeta eléctrico
-      borderColor: "#ff00ff52", 
+      borderColor: "#3fff0091",
       content: addLineBreaks(texto_3),
       title: "BASES DE DATOS",
+      boxShadow:'#3fff00d6',
     },
   ];
 
@@ -78,8 +105,17 @@ const About = () => {
         {cardsData.map((card, index) => (
           <div
             key={index}
+            ref={(element) => (cardRefs.current[index] = element)}
             className="card rounded-lg overflow-hidden shadow-lg"
-            style={{ backgroundColor: card.color,border: `2px solid ${card.borderColor}` }}
+            style={{
+              backgroundColor: card.color,
+              border: `2px solid ${card.borderColor}`,
+              boxShadow: `0px 0px 10px ${card.boxShadow}`,
+              filter: `brightness(${1 - borderIntensities[index]})`, // Solo aplicar el filtro al fondo
+              
+            }}
+            onMouseMove={(event) => handleMouseMove(event, index)}
+            onMouseLeave={() => handleMouseLeave(index)} // Manejar el evento onMouseLeave
           >
             <div className="font-bold text-xl mb-2 text-white flex justify-center items-center h-16">
               <h3 className="border-b-4 border-orange-700 py-2">{card.title}</h3>
