@@ -68,11 +68,11 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${
-                active === nav.title ? "text-white" : "text-secondary"
+                active === nav.title ? "text-white" : "text-purple-400"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <a className={``} href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
         </ul>
@@ -95,14 +95,14 @@ const Navbar = () => {
                 <li
                   key={nav.id}
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
+                    active === nav.title ? "text-white" : "text-purple-400"
                   }`}
                   onClick={() => {
                     setToggle(!toggle);
                     setActive(nav.title);
                   }}
                 >
-                  <a className={`text-white`} href={`#${nav.id}`}>
+                  <a href={`#${nav.id}`}>
                     {nav.title}
                   </a>
                 </li>
