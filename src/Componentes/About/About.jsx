@@ -97,11 +97,11 @@ const About = () => {
   ];
 
   return (
-    <div className="contenedor_about w-full min-h-[600px] flex flex-col justify-center items-center mt-10 p-12 md:p-24 md:mt-0">
-      <div className="contenedor_header_about flex justify-center items-center w-full h-[30px] py-14 border-b-4  border-orange-700  text-white md:text-[24px] font-bold md:py-12 ">
+    <div className="contenedor_about w-full min-h-[600px] flex flex-col justify-center items-center gap-1 mt-16 p-12 md:p-24 md:mt-0">
+      <div className="contenedor_header_about flex  justify-center items-center w-full h-[30px] py-14 border-b-4  border-orange-700  text-white md:text-[24px] font-bold md:py-12 ">
         {displayText}
       </div>
-      <div className="contenedor_body_about w-full grid grid-cols-1 gap-4 mt-10 sm:grid-cols-2 md:grid-cols-3 ">
+      <div className="contenedor_body_about w-full grid grid-cols-1 gap-8 mt-10 sm:grid-cols-2 md:grid-cols-3 ">
         {cardsData.map((card, index) => (
           <div
             key={index}

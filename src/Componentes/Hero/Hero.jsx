@@ -68,11 +68,8 @@ const Hero = () => {
         id="hero_container"
         className={`w-full min-h-full mt-28 py-0 flex flex-col md:flex-row md:items-start lg:px-5 lg:mt-40 lg:p[120px] `}
       >
-        <div
-          className={`w-full h-5/6 flex flex-row items-start justify-start gap-5 sm:w-3/6 lg:w-3/6 ${my_styles.paddingX} `}
-        >
-          <div className={`flex flex-col justify-start items-start `}></div>
-
+        <div className={`w-full h-5/6 flex flex-row items-start justify-start gap-5 sm:w-3/6 lg:w-3/6 ${my_styles.paddingX} `}>
+          
           <div>
             <h1 className={`${my_styles.heroHeadText} text-white`}>
               {renderTexto1}{" "}
@@ -91,7 +88,7 @@ const Hero = () => {
             <p className={`${my_styles.heroSubText} text-white-200 mt-10`}>
               {renderTexto3}
             </p>
-            <div className="w-full flex flex-row justify-start gap-2 mt-12">
+            <div className="w-full flex flex-row justify-start gap-2 mt-14">
               {/*<ButtonOne animation={"animate-left-right"}>Contacto</ButtonOne>*/}
               <ButtonTwo />
             </div>
@@ -99,10 +96,10 @@ const Hero = () => {
         </div>
 
         <div
-          className={`w-full sm:w-3/6 lg:w-3/6 h-6/6 ${my_styles.paddingX} md:-mt-8.5  flex flex-row justify-center items-start`}
+          className={`w-full max-w-6/6  sm:w-3/6 lg:w-3/6 h-6/6 ${my_styles.paddingX} md:-mt-8.5  flex flex-row justify-center items-start`}
         >
           <div
-            className={`contenedor_imagnen w-[55rem] max-w-96 h-96 md:mt-0 border-double border-4 border-indigo-600 rounded-full bg-[url('${miImagUno}')]  bg-center bg-cover bg-no-repeat`}
+            className={`contenedor_imagnen w-[55rem] max-w-96 h-96 mt-16 md:mt-0 border-double border-4 border-indigo-600 rounded-full bg-[url('${miImagUno}')]  bg-center bg-cover bg-no-repeat`}
             style={{ backgroundImage: `url(${miImagUno})` }}
           ></div>
         </div>

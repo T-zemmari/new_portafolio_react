@@ -32,6 +32,6 @@
 
   @media(max-width:760px){
     .button_two_custom{
-      width: 80%;
+      /*width: 100%;*/
     }
   }
