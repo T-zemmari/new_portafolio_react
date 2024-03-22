@@ -2,7 +2,12 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { my_styles } from "../../my_styles";
-import { navLinks,navLinksIcons, misApellidos, miNombre } from "../../constantes.js";
+import {
+  navLinks,
+  navLinksIcons,
+  misApellidos,
+  miNombre,
+} from "../../constantes.js";
 import { logo, menu, close } from "../../assets/imgs";
 
 const Navbar = () => {
@@ -10,6 +15,21 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [reachedHero, setreachedHero] = useState(false);
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleClick = (elementId, device) => {
+    if (device == "movil") {
+      setToggle(!toggle);
+    }
+    setActive(elementId);
+    scrollToSection(elementId);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,9 +44,7 @@ const Navbar = () => {
       const navbarHeight = document.querySelector("nav")?.clientHeight || 0;
       /*const windowHeight = window.innerHeight;*/
 
-      if (
-        scrollTop + navbarHeight > heroOffsetTop 
-      ) {
+      if (scrollTop + navbarHeight > heroOffsetTop) {
         setreachedHero(true);
       } else {
         setreachedHero(false);
@@ -67,11 +85,15 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`cursor-pointer`}
-              onClick={() => setActive(nav.id)}
+              onClick={() => handleClick(nav.id, "desktop")}
             >
-              <a href={`#${nav.id}`}>
-                <img className={`${active===nav.id ? 'w-[40px] h-[40px]' :'w-[35px] h-[35px]'} rounded-full`} src={nav.icon} alt={nav.id} />
-              </a>
+              <img
+                className={`${
+                  active === nav.id ? "w-[40px] h-[40px]" : "w-[35px] h-[35px]"
+                } rounded-full`}
+                src={nav.icon}
+                alt={nav.id}
+              />
             </li>
           ))}
         </ul>
@@ -96,14 +118,9 @@ const Navbar = () => {
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
                     active === nav.id ? "text-white" : "text-purple-400"
                   }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.id);
-                  }}
+                  onClick={() => handleClick(nav.id, "movil")}
                 >
-                  <a href={`#${nav.id}`}>
-                    {nav.id}
-                  </a>
+                  {nav.id}
                 </li>
               ))}
             </ul>

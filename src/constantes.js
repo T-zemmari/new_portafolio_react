@@ -43,56 +43,55 @@ export const bgWave1=bgWaveOne;
 
 export const navLinks = [
     {
-        id: "sobre_mi",
+        id: "Sobre-mi",
         title: "Sobre mi",
     },
     {
-        id: "mis_trabajos",
-        title: "Trabajos",
-    },
-    {
-        id: "contacto",
-        title: "Contacto",
-    },
-    {
-        id: "skills",
+        id: "Skills",
         title: "Skills",
     },
     {
-        id: "expeiencias",
+        id: "Mis-trabajos",
+        title: "Trabajos",
+    },
+    {
+        id: "Experiencias",
         title: "Experiencias",
     },
     {
-        id: "titulos",
+        id: "Estudios",
         title: "Titulos",
+    },
+    {
+        id: "Contacto",
+        title: "Contacto",
     },
 ];
 
 
 export const navLinksIcons = [
     {
-        id: "sobre_mi",
+        id: "Sobre-mi",
         icon: icnAbout,
     },
     {
-        id: "mis_trabajos",
-        icon: icnWorks,
-    },
-    {
-        id: "skills",
+        id: "Skills",
         icon: icnSkills,
     },
-    
     {
-        id: "expeiencias",
+        id: "Mis-trabajos",
+        icon: icnWorks,
+    },  
+    {
+        id: "Experiencias",
         icon: icnExper,
     },
     {
-        id: "titulos",
+        id: "Estudios",
         icon: icnTitul,
     },
     {
-        id: "contacto",
+        id: "Contacto",
         icon: icnContact,
     },
 ];
