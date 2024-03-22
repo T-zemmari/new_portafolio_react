@@ -34,7 +34,7 @@ const About = () => {
     const interval = setInterval(() => {
       setDisplayText((prevText) => {
         if (prevText.length < text.length) {
-          return text.substring(0, prevText.length + 1).toLocaleUpperCase();
+          return text.substring(0, prevText.length + 1);
         } else {
           clearInterval(interval);
           return prevText;
@@ -78,30 +78,37 @@ const About = () => {
       borderColor: "#ff00407a",
       content: addLineBreaks(texto_1),
       title: "FRONTEND",
-      boxShadow:'#ff0040db',
+      boxShadow: "#ff0040db",
     },
     {
       color: "#262726",
       borderColor: "#00ffff4f",
       content: addLineBreaks(texto_2),
       title: "BACKEND",
-      boxShadow:'#00ffffb3',
+      boxShadow: "#00ffffb3",
     },
     {
       color: "#262726",
-      borderColor: "#3fff0091",
+      borderColor: "#ab0cdf",
       content: addLineBreaks(texto_3),
       title: "BASES DE DATOS",
-      boxShadow:'#3fff00d6',
+      boxShadow: "#fb0cffd6",
     },
   ];
 
   return (
-    <div className="contenedor_about w-full min-h-[600px] flex flex-col justify-center items-center gap-1 mt-16 p-12 md:p-24 md:mt-0" id="Sobre-mi">
-      <div className="contenedor_header_about flex  justify-center items-center w-full h-[30px] py-14 border-b-4  border-orange-700  text-white md:text-[24px] font-bold md:py-12 ">
+    <div
+      className="contenedor_about w-full min-h-[600px] flex flex-col justify-start items-start gap-1 mt-16 p-12 md:p-24 md:mt-24"
+      id="Sobre-mi"
+    >
+      <h1 className="text-[#b7b7b7] text-[20px] font-bold">Introducción</h1>
+      <div className="flex justify-start items-center w-full h-[30px] text-white md:text-[38px] font-bold md:py-6 md:mt-2">
+        RESUMEN
+      </div>
+      <div className="contenedor_header_about flex  justify-start items-center w-full h-[30px] py-14  text-white md:text-[16px] font-bold md:py-8 ">
         {displayText}
       </div>
-      <div className="contenedor_body_about w-full grid grid-cols-1 gap-8 mt-10 sm:grid-cols-2 md:grid-cols-3 ">
+      <div className="contenedor_body_about w-full grid grid-cols-1 gap-8 mt-10 md:mt-5 sm:grid-cols-2 md:grid-cols-3">
         {cardsData.map((card, index) => (
           <div
             key={index}
@@ -111,14 +118,15 @@ const About = () => {
               backgroundColor: card.color,
               border: `2px solid ${card.borderColor}`,
               boxShadow: `0px 0px 10px ${card.boxShadow}`,
-              filter: `brightness(${1 - borderIntensities[index]})`, 
-              
+              filter: `brightness(${1 - borderIntensities[index]})`,
             }}
             onMouseMove={(event) => handleMouseMove(event, index)}
-            onMouseLeave={() => handleMouseLeave(index)} 
+            onMouseLeave={() => handleMouseLeave(index)}
           >
             <div className="font-bold text-xl mb-2 text-white flex justify-center items-center h-16">
-              <h3 className="border-b-4 border-orange-700 py-2">{card.title}</h3>
+              <h3 className="border-b-4 border-orange-700 py-2">
+                {card.title}
+              </h3>
             </div>
             <div
               className="text-gray-200 text-base  px-8 py-4 leading-6 pb-8 font-semibold"

@@ -29,7 +29,7 @@ const Navbar = () => {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      const offset = section.offsetTop - 60; // Calcula la posición 50px antes del inicio de la sección
+      const offset = section.offsetTop - 78; // Calcula la posición 50px antes del inicio de la sección
       window.scrollTo({
         top: offset,
         behavior: "smooth"
