@@ -22,11 +22,10 @@ const Navbar = () => {
       const heroOffsetTop =
         document.getElementById("hero_container")?.offsetTop || 0;
       const navbarHeight = document.querySelector("nav")?.clientHeight || 0;
-      const windowHeight = window.innerHeight;
+      /*const windowHeight = window.innerHeight;*/
 
       if (
-        scrollTop + navbarHeight > heroOffsetTop &&
-        scrollTop < heroOffsetTop + windowHeight
+        scrollTop + navbarHeight > heroOffsetTop 
       ) {
         setreachedHero(true);
       } else {
