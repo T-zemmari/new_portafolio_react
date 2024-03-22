@@ -111,11 +111,11 @@ const About = () => {
               backgroundColor: card.color,
               border: `2px solid ${card.borderColor}`,
               boxShadow: `0px 0px 10px ${card.boxShadow}`,
-              filter: `brightness(${1 - borderIntensities[index]})`, // Solo aplicar el filtro al fondo
+              filter: `brightness(${1 - borderIntensities[index]})`, 
               
             }}
             onMouseMove={(event) => handleMouseMove(event, index)}
-            onMouseLeave={() => handleMouseLeave(index)} // Manejar el evento onMouseLeave
+            onMouseLeave={() => handleMouseLeave(index)} 
           >
             <div className="font-bold text-xl mb-2 text-white flex justify-center items-center h-16">
               <h3 className="border-b-4 border-orange-700 py-2">{card.title}</h3>
