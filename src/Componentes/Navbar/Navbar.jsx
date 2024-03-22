@@ -16,10 +16,24 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [reachedHero, setreachedHero] = useState(false);
 
+  const handleLinkClick = () => {
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }, 100); // Retraso de 100ms antes de realizar el desplazamiento
+  };
+
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const offset = section.offsetTop - 60; // Calcula la posición 50px antes del inicio de la sección
+      window.scrollTo({
+        top: offset,
+        behavior: "smooth"
+      });
     }
   };
 
@@ -68,13 +82,7 @@ const Navbar = () => {
         <Link
           to="/"
           className="flex items-center gap-2"
-          onClick={() => {
-            setActive("");
-            window.scrollTo({
-              top:0,
-              behavior: "smooth"
-            });
-          }}
+          onClick={handleLinkClick}
         >
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
           <p className="text-white text-[18px] font-bold cursor-pointer flex ">
@@ -106,7 +114,7 @@ const Navbar = () => {
             src={toggle ? close : menu}
             alt="menu"
             className="w-[28px] h-[28px] object-contain"
-            onClick={() => setToggle(!toggle)}
+            onClick={() => setToggle(!toggle)} 
           />
 
           <div
