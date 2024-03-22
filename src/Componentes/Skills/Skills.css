@@ -1,0 +1,32 @@
+.contenedor_skills{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(183deg, #100b5f, #2f2d50, #3a0061, #1f6100, #6300b4);
+    background-size: 1000% 1000%;
+
+    -webkit-animation: AnimationName 0s ease infinite;
+    -moz-animation: AnimationName 0s ease infinite;
+    -o-animation: AnimationName 0s ease infinite;
+    animation: AnimationName 0s ease infinite;
+}
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:30% 0%}
+    50%{background-position:71% 100%}
+    100%{background-position:30% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:30% 0%}
+    50%{background-position:71% 100%}
+    100%{background-position:30% 0%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:30% 0%}
+    50%{background-position:71% 100%}
+    100%{background-position:30% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:30% 0%}
+    50%{background-position:71% 100%}
+}

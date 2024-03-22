@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { my_styles } from "../../my_styles";
-import { navLinks, misApellidos, miNombre } from "../../constantes.js";
+import { navLinks,navLinksIcons, misApellidos, miNombre } from "../../constantes.js";
 import { logo, menu, close } from "../../assets/imgs";
 
 const Navbar = () => {
@@ -62,16 +62,16 @@ const Navbar = () => {
           </p>
         </Link>
 
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((nav) => (
+        <ul className="list-none hidden sm:flex flex-row gap-4">
+          {navLinksIcons.map((nav) => (
             <li
               key={nav.id}
-              className={`${
-                active === nav.title ? "text-white" : "text-purple-400"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
+              className={`cursor-pointer`}
+              onClick={() => setActive(nav.id)}
             >
-              <a className={``} href={`#${nav.id}`}>{nav.title}</a>
+              <a href={`#${nav.id}`}>
+                <img className={`${active===nav.id ? 'w-[40px] h-[40px]' :'w-[35px] h-[35px]'} rounded-full`} src={nav.icon} alt={nav.id} />
+              </a>
             </li>
           ))}
         </ul>
@@ -94,15 +94,15 @@ const Navbar = () => {
                 <li
                   key={nav.id}
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-purple-400"
+                    active === nav.id ? "text-white" : "text-purple-400"
                   }`}
                   onClick={() => {
                     setToggle(!toggle);
-                    setActive(nav.title);
+                    setActive(nav.id);
                   }}
                 >
                   <a href={`#${nav.id}`}>
-                    {nav.title}
+                    {nav.id}
                   </a>
                 </li>
               ))}

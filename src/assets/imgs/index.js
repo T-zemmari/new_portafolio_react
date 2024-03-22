@@ -34,10 +34,12 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import miImagenUno from "./mis_fotos/yo_5.png";
 
-import icnContact from "../icons/icn_cont_email_3.png";
-import icnExper from "../icons/icn_cont_experiencias_1.png";
-import icnTitul from "../icons/icn_cont_titulos_2.png";
-import icnWorks from "../icons/icn_cont_trabajos_2.png";
+import icnContact from "../icons/icn_cont_email_4.png";
+import icnExper from "../icons/icn_cont_experiencias_2.png";
+import icnTitul from "../icons/icn_cont_titulos_3.png";
+import icnWorks from "../icons/icn_cont_works_3.png";
+import icnAbout from "../icons/icn_cont_sobre_mi_2.png";
+import icnSkills from "../icons/icn_cont_skills_1.png";
 
 import bgWaveOne from "../imgs/bgWave3.png";
 
@@ -79,4 +81,6 @@ export {
   icnTitul,
   icnWorks,
   bgWaveOne,
+  icnAbout,
+  icnSkills,
 };

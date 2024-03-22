@@ -25,6 +25,8 @@ import {
     icnTitul,
     icnWorks,
     bgWaveOne,
+    icnAbout,
+    icnSkills,
 } from "./assets/imgs";
 
 
@@ -52,7 +54,50 @@ export const navLinks = [
         id: "contacto",
         title: "Contacto",
     },
+    {
+        id: "skills",
+        title: "Skills",
+    },
+    {
+        id: "expeiencias",
+        title: "Experiencias",
+    },
+    {
+        id: "titulos",
+        title: "Titulos",
+    },
 ];
+
+
+export const navLinksIcons = [
+    {
+        id: "sobre_mi",
+        icon: icnAbout,
+    },
+    {
+        id: "mis_trabajos",
+        icon: icnWorks,
+    },
+    {
+        id: "skills",
+        icon: icnSkills,
+    },
+    
+    {
+        id: "expeiencias",
+        icon: icnExper,
+    },
+    {
+        id: "titulos",
+        icon: icnTitul,
+    },
+    {
+        id: "contacto",
+        icon: icnContact,
+    },
+];
+
+
 
 const servicios = [
     {

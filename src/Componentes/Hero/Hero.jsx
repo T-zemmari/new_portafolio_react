@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import MenuToggleOne from "../MenuToggleOne/MenuToggleOne.jsx";
 import { useEffect, useState } from "react";
 
+
 const Hero = () => {
   const [mostrarTexto2, setMostrarTexto2] = useState(false);
   const [mostrarTexto3, setMostrarTexto3] = useState(false);
