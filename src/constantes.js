@@ -5,6 +5,8 @@ import {
     web,
     javascript,
     typescript,
+    php,
+    pyton,
     html,
     css,
     reactjs,
@@ -30,16 +32,16 @@ import {
 } from "./assets/imgs";
 
 
-export const miNombre='Tarek';
-export const misApellidos="Zemmari Kissani";
-export const miImagUno=miImagenUno;
+export const miNombre = 'Tarek';
+export const misApellidos = "Zemmari Kissani";
+export const miImagUno = miImagenUno;
 
-export const icnContact1=icnContact;
-export const icnExper1=icnExper;
-export const icnTitul1=icnTitul;
-export const icnWorks1=icnWorks;
+export const icnContact1 = icnContact;
+export const icnExper1 = icnExper;
+export const icnTitul1 = icnTitul;
+export const icnWorks1 = icnWorks;
 
-export const bgWave1=bgWaveOne;
+export const bgWave1 = bgWaveOne;
 
 export const navLinks = [
     {
@@ -81,7 +83,7 @@ export const navLinksIcons = [
     {
         id: "Mis-trabajos",
         icon: icnWorks,
-    },  
+    },
     {
         id: "Experiencias",
         icon: icnExper,
@@ -97,6 +99,82 @@ export const navLinksIcons = [
 ];
 
 
+// Skills Frontend
+export const infoSkillsFront = [
+    {
+        id: 1,
+        skill: 'HTML',
+        level: 'Intermedio',
+        percent_level:'95',
+        icon:html,
+    },
+    {
+        id: 2,
+        skill: 'CSS',
+        level: 'Intermedio',
+        percent_level:'85',
+        icon:css,
+    },
+    {
+        id: 3,
+        skill: 'JavaScript',
+        level: 'Avanzado',
+        percent_level:'90',
+        icon:javascript,
+    },
+];
+
+// Skills Backend
+export const infoSkillsBack = [
+    {
+        id: 1,
+        skill: 'Node.js',
+        level: 'Avanzado',
+        percent_level:'85',
+        icon:nodejs,
+        
+    },
+    {
+        id: 2,
+        skill: 'Php',
+        level: 'Avanzado',
+        percent_level:'90',
+        icon:php,
+    },
+    {
+        id: 3,
+        skill: 'Python',
+        level: 'Intermedio',
+        percent_level:'70',
+        icon:pyton,
+    },
+];
+
+// Skills Base de datos
+export const infoSkillsDatabase = [
+    {
+        id: 1,
+        skill: 'MySQL',
+        level: 'Intermedio',
+        percent_level:'90',
+        icon:html,
+    },
+    {
+        id: 2,
+        skill: 'MongoDB',
+        level: 'Intermedio',
+        percent_level:'60',
+        icon:html,
+    },
+   
+    {
+        id: 3,
+        skill: 'Sqlite',
+        level: 'Básico',
+        percent_level:'40',
+        icon:html,
+    },
+];
 
 const servicios = [
     {

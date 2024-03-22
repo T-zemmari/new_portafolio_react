@@ -1,0 +1,67 @@
+.skill-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 10px;
+}
+
+.skill-icon img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.skill-info {
+  flex-grow: 1;
+}
+
+.skill-info h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.skill-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.progress-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+progress {
+  width: 100%;
+  height: 12px;
+  border: none;
+  border-radius: 20px;
+  appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #6cb2eb;
+  border-radius: 20px;
+}
+
+progress::-moz-progress-bar {
+  background-color: #6cb2eb;
+  border-radius: 20px;
+}
+
+span {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #555;
+  font-size: 14px;
+  font-weight: bold;
+}

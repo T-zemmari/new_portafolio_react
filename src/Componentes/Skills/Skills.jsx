@@ -1,11 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import {
+  infoSkillsFront,
+  infoSkillsBack,
+  infoSkillsDatabase,
+} from "../../constantes";
 import CardTwo from "../CardTwo/CardTwo";
 import "./Skills.css";
+import SkillCard from "../SkillCard/SkillCard";
 
 const Skills = () => {
-  const [active, setActive] = useState("Frontend");
+  const [arraySkills, setArraySkills] = useState([]);
+  const [element, setElement] = useState("Frontend");
 
-  const mostrarElemento = (elemento) => {};
+  useEffect(() => {
+    setArraySkills(infoSkillsFront);
+  }, []);
+
+  useEffect(() => {
+    if (element === "Frontend") setArraySkills(infoSkillsFront);
+    if (element === "Backend") setArraySkills(infoSkillsBack);
+    if (element === "Base de datos") setArraySkills(infoSkillsDatabase);
+  }, [element]);
+
+  const mostrarElemento = (elemento) => {
+    setElement(elemento);
+  };
   const infoCards = [
     {
       id: "0",
@@ -43,13 +62,17 @@ const Skills = () => {
                 <CardTwo
                   key={item.id}
                   title={item.title}
-                  onlick={item.onclick}
+                  onClick={item.onclick}
                   keyID={item.id}
                 />
               );
             })}
           </div>
-          <div className=" flex w-full md:w-3/6 h-[400px]  rounded-[10px] mt-10 border-2 border-[#403ca3]"></div>
+          <div className="w-full md:w-3/6 h-[400px] flex flex-col justify-center items-start  gap-4 rounded-[10px] mt-10 border-2 border-[#403ca3]">
+            {arraySkills?.map((item) => {
+              return <SkillCard key={item.id} level={item.level} percent_level={item.percent_level} icon={item.icon}/>;
+            })}
+          </div>
         </div>
       </div>
     </>
