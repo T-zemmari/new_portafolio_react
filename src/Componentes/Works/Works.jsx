@@ -4,7 +4,7 @@ const Works = () => {
   return (
     <>
       <div
-        className="contenedor_works flex flex-col mt-16 p-12 md:py-2 md:px-24 md:mt-0"
+        className="contenedor_works flex flex-col mt-16 p-8 md:p-24 md:mt-0"
         id="Mis-trabajos"
       >
         <h1 className="text-[#b7b7b7] text-[20px] font-bold">Trabajos</h1>

@@ -4,7 +4,7 @@ const Studies = () => {
   return (
     <>
       <div
-        className="contenedor_estudios flex flex-col mt-16 p-12 md:py-2 md:px-24 md:mt-0"
+        className="contenedor_estudios flex flex-col mt-16 p-8 md:p-24 md:mt-0"
         id="Estudios"
       >
         <h1 className="text-[#b7b7b7] text-[20px] font-bold">Titúlaciones</h1>

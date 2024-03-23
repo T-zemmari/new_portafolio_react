@@ -25,6 +25,9 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import php from "./tech/php_2.png";
 import pyton from "./tech/pyton_1.png";
+import symfony from "./tech/symfony.png";
+import mysql from "./tech/mysql_1.png";
+import sqlite from "./tech/sqlite3.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -63,6 +66,7 @@ export {
   html,
   javascript,
   php,
+  symfony,
   pyton,
   mongodb,
   nodejs,
@@ -87,4 +91,6 @@ export {
   bgWaveOne,
   icnAbout,
   icnSkills,
+  sqlite,
+  mysql
 };

@@ -3,24 +3,26 @@
   align-items: center;
   gap: 20px;
   width: 100%;
-  padding: 10px;
+  padding:10px;
 }
 
 .skill-icon img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  border: 2px solid #fff;
+  /*border: 2px solid #fff;*/
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .skill-info {
   flex-grow: 1;
+  color: white;
 }
 
 .skill-info h3 {
   font-size: 20px;
   margin-bottom: 5px;
+
 }
 
 .skill-info p {
@@ -39,29 +41,34 @@ progress {
   border: none;
   border-radius: 20px;
   appearance: none;
+  color: #ffffff;
 }
 
 progress::-webkit-progress-bar {
-  background-color: #f0f0f0;
+  background-color: #131212;
   border-radius: 20px;
+  color: white;
+ 
 }
 
 progress::-webkit-progress-value {
-  background-color: #6cb2eb;
+  background-color: #ffffff;
   border-radius: 20px;
+  color: white;
 }
 
 progress::-moz-progress-bar {
   background-color: #6cb2eb;
   border-radius: 20px;
+  color: #ffffff !important;
 }
 
 .custom_skill_span {
   position: absolute;
-  top: 50%;
+  top: -30%;
   right: 10px;
   transform: translateY(-50%);
-  color: #555;
+  color: white; 
   font-size: 14px;
   font-weight: bold;
 }

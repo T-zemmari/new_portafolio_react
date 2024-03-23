@@ -1,5 +1,5 @@
 .contenedor_card_two {
-  width: 250px;
+  width: 40%;
   height: 150px;
   background: #fff;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
@@ -8,4 +8,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width:768px){
+  .contenedor_card_two {
+    width: 100%;
+  }
 }

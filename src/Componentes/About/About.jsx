@@ -98,7 +98,7 @@ const About = () => {
 
   return (
     <div
-      className="contenedor_about w-full min-h-[600px] flex flex-col justify-start items-start gap-1 mt-16 p-12 md:p-24 md:mt-24"
+      className="contenedor_about w-full min-h-[600px] flex flex-col justify-start items-start gap-1 mt-24 p-8 md:p-24 md:mt-24"
       id="Sobre-mi"
     >
       <h1 className="text-[#b7b7b7] text-[20px] font-bold">Introducción</h1>

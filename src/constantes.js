@@ -29,6 +29,9 @@ import {
     bgWaveOne,
     icnAbout,
     icnSkills,
+    symfony,
+    mysql,
+    sqlite,
 } from "./assets/imgs";
 
 
@@ -103,7 +106,7 @@ export const navLinksIcons = [
 export const infoSkillsFront = [
     {
         id: 1,
-        skill: 'HTML',
+        skill: 'Html',
         level: 'Intermedio',
         percent_level:'95',
         icon:html,
@@ -122,6 +125,13 @@ export const infoSkillsFront = [
         percent_level:'90',
         icon:javascript,
     },
+    {
+        id: 4,
+        skill: 'React',
+        level: 'Intermedio',
+        percent_level:'80',
+        icon:reactjs,
+    },
 ];
 
 // Skills Backend
@@ -136,7 +146,7 @@ export const infoSkillsBack = [
     },
     {
         id: 2,
-        skill: 'Php',
+        skill: 'PHP',
         level: 'Avanzado',
         percent_level:'90',
         icon:php,
@@ -145,8 +155,15 @@ export const infoSkillsBack = [
         id: 3,
         skill: 'Python',
         level: 'Intermedio',
-        percent_level:'70',
+        percent_level:'60',
         icon:pyton,
+    },
+    {
+        id: 4,
+        skill: 'Symfony',
+        level: 'Intermedio',
+        percent_level:'80',
+        icon:symfony,
     },
 ];
 
@@ -155,24 +172,50 @@ export const infoSkillsDatabase = [
     {
         id: 1,
         skill: 'MySQL',
-        level: 'Intermedio',
+        level: 'Avanzado',
         percent_level:'90',
-        icon:html,
+        icon:mysql,
     },
     {
         id: 2,
         skill: 'MongoDB',
         level: 'Intermedio',
         percent_level:'60',
-        icon:html,
+        icon:mongodb,
     },
    
     {
         id: 3,
         skill: 'Sqlite',
-        level: 'Básico',
-        percent_level:'40',
-        icon:html,
+        level: 'Intermedio',
+        percent_level:'65',
+        icon:sqlite,
+    },
+];
+
+// Skills Base de datos
+export const infoSkillsUtils = [
+    {
+        id: 1,
+        skill: 'Docker',
+        level: 'Avanzado',
+        percent_level:'80',
+        icon:docker,
+    },
+    {
+        id: 2,
+        skill: 'GIT',
+        level: 'Intermedio',
+        percent_level:'70',
+        icon:git,
+    },
+   
+    {
+        id: 3,
+        skill: 'Redux',
+        level: 'Avanzado',
+        percent_level:'85',
+        icon:redux,
     },
 ];
 
