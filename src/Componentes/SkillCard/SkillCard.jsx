@@ -11,7 +11,7 @@ const SkillCard = ({  skill, level, percent_level, icon }) => {
         <p>Nivel: {level}</p>
         <div className="progress-wrapper">
           <progress value={percent_level} max="100"></progress>
-          <span>{percent_level}%</span>
+          <span className='custom_skill_span'>{percent_level}%</span>
         </div>
       </div>
     </div>
