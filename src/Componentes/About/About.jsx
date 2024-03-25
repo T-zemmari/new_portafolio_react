@@ -113,7 +113,7 @@ const About = () => {
           <div
             key={index}
             ref={(element) => (cardRefs.current[index] = element)}
-            className="card rounded-lg overflow-hidden shadow-lg"
+            className="transition-transform duration-700 card rounded-lg overflow-hidden shadow-lg hover:scale-105 "
             style={{
               backgroundColor: card.color,
               border: `2px solid ${card.borderColor}`,
