@@ -108,29 +108,29 @@ export const infoSkillsFront = [
         id: 1,
         skill: 'Html',
         level: 'Intermedio',
-        percent_level:'95',
-        icon:html,
+        percent_level: '95',
+        icon: html,
     },
     {
         id: 2,
         skill: 'CSS',
         level: 'Intermedio',
-        percent_level:'85',
-        icon:css,
+        percent_level: '85',
+        icon: css,
     },
     {
         id: 3,
         skill: 'JavaScript',
         level: 'Avanzado',
-        percent_level:'90',
-        icon:javascript,
+        percent_level: '90',
+        icon: javascript,
     },
     {
         id: 4,
         skill: 'React',
         level: 'Intermedio',
-        percent_level:'80',
-        icon:reactjs,
+        percent_level: '80',
+        icon: reactjs,
     },
 ];
 
@@ -140,30 +140,30 @@ export const infoSkillsBack = [
         id: 1,
         skill: 'Node.js',
         level: 'Avanzado',
-        percent_level:'85',
-        icon:nodejs,
-        
+        percent_level: '85',
+        icon: nodejs,
+
     },
     {
         id: 2,
         skill: 'PHP',
         level: 'Avanzado',
-        percent_level:'90',
-        icon:php,
+        percent_level: '90',
+        icon: php,
     },
     {
         id: 3,
         skill: 'Python',
         level: 'Intermedio',
-        percent_level:'60',
-        icon:pyton,
+        percent_level: '60',
+        icon: pyton,
     },
     {
         id: 4,
         skill: 'Symfony',
         level: 'Intermedio',
-        percent_level:'80',
-        icon:symfony,
+        percent_level: '80',
+        icon: symfony,
     },
 ];
 
@@ -173,23 +173,23 @@ export const infoSkillsDatabase = [
         id: 1,
         skill: 'MySQL',
         level: 'Avanzado',
-        percent_level:'90',
-        icon:mysql,
+        percent_level: '90',
+        icon: mysql,
     },
     {
         id: 2,
         skill: 'MongoDB',
         level: 'Intermedio',
-        percent_level:'60',
-        icon:mongodb,
+        percent_level: '60',
+        icon: mongodb,
     },
-   
+
     {
         id: 3,
         skill: 'Sqlite',
         level: 'Intermedio',
-        percent_level:'65',
-        icon:sqlite,
+        percent_level: '65',
+        icon: sqlite,
     },
 ];
 
@@ -199,23 +199,23 @@ export const infoSkillsUtils = [
         id: 1,
         skill: 'Docker',
         level: 'Avanzado',
-        percent_level:'80',
-        icon:docker,
+        percent_level: '80',
+        icon: docker,
     },
     {
         id: 2,
         skill: 'GIT',
         level: 'Intermedio',
-        percent_level:'70',
-        icon:git,
+        percent_level: '70',
+        icon: git,
     },
-   
+
     {
         id: 3,
         skill: 'Redux',
         level: 'Avanzado',
-        percent_level:'85',
-        icon:redux,
+        percent_level: '85',
+        icon: redux,
     },
 ];
 
@@ -335,8 +335,9 @@ const testimonios = [
 
 const proyectos = [
     {
-        name: "TM-Escapade",
-        description:
+        id: 0,
+        title: "TM-Escapade",
+        content:
             "Bienvenido a TM-Escapade, tu puerta de entrada a experiencias inolvidables en Marruecos. En TM-Escapade, no solo organizamos viajes, sino que creamos memorias que perduran toda la vida.",
         tags: [
             {
@@ -352,8 +353,101 @@ const proyectos = [
                 color: "pink-text-gradient",
             },
         ],
-        image: tmEscapadeImage,
+        backgroundImage: tmEscapadeImage,
         source_code_link: "https://github.com/tm-escapade",
+        icon: ''
+    },
+    {
+        id: 1,
+        title: "TM-Escapade",
+        content:
+            "Bienvenido a TM-Escapade, tu puerta de entrada a experiencias inolvidables en Marruecos. En TM-Escapade, no solo organizamos viajes, sino que creamos memorias que perduran toda la vida.",
+        tags: [
+            {
+                name: "experiencias",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "viajes",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Marrakech",
+                color: "pink-text-gradient",
+            },
+        ],
+        backgroundImage: tmEscapadeImage,
+        source_code_link: "https://github.com/tm-escapade",
+        icon: ''
+    },
+    {
+        id: 2,
+        title: "TM-Escapade",
+        content:
+            "Bienvenido a TM-Escapade, tu puerta de entrada a experiencias inolvidables en Marruecos. En TM-Escapade, no solo organizamos viajes, sino que creamos memorias que perduran toda la vida.",
+        tags: [
+            {
+                name: "experiencias",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "viajes",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Marrakech",
+                color: "pink-text-gradient",
+            },
+        ],
+        backgroundImage: tmEscapadeImage,
+        source_code_link: "https://github.com/tm-escapade",
+        icon: ''
+    },
+    {
+        id: 3,
+        title: "TM-Escapade",
+        content:
+            "Bienvenido a TM-Escapade, tu puerta de entrada a experiencias inolvidables en Marruecos. En TM-Escapade, no solo organizamos viajes, sino que creamos memorias que perduran toda la vida.",
+        tags: [
+            {
+                name: "experiencias",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "viajes",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Marrakech",
+                color: "pink-text-gradient",
+            },
+        ],
+        backgroundImage: tmEscapadeImage,
+        source_code_link: "https://github.com/tm-escapade",
+        icon: ''
+    },
+    {
+        id: 4,
+        title: "TM-Escapade",
+        content:
+            "Bienvenido a TM-Escapade, tu puerta de entrada a experiencias inolvidables en Marruecos. En TM-Escapade, no solo organizamos viajes, sino que creamos memorias que perduran toda la vida.",
+        tags: [
+            {
+                name: "experiencias",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "viajes",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Marrakech",
+                color: "pink-text-gradient",
+            },
+        ],
+        backgroundImage: tmEscapadeImage,
+        source_code_link: "https://github.com/tm-escapade",
+        icon: ''
     },
 ];
 

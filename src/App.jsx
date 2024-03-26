@@ -3,11 +3,11 @@ import Navbar from "./Componentes/Navbar/Navbar";
 import Hero from "./Componentes/Hero/Hero";
 import About from "./Componentes/About/About";
 import Skills from "./Componentes/Skills/Skills";
-import Works from "./Componentes/Works/Works";
 import Contact from "./Componentes/Contact/Contact";
 import Footer from "./Componentes/Footer/Footer";
 import Experiences from "./Componentes/Experiences/Experiences";
 import Studies from "./Componentes/Studies/Studies";
+import Projects from "./Componentes/Projects/Projects";
 import "./App.css";
 
 const App = () => {
@@ -18,7 +18,7 @@ const App = () => {
         <Hero />
         <About />
         <Skills />
-        <Works />
+        <Projects />
         <Experiences />
         <Studies />
         <Contact />

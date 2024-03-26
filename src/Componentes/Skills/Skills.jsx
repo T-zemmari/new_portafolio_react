@@ -45,7 +45,7 @@ const Skills = () => {
     },
     {
       id: "3",
-      title: "Utils",
+      title: "UTILS",
       onclick: () => mostrarElemento("Utils"),
     },
   ];
