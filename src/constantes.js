@@ -32,6 +32,9 @@ import {
     symfony,
     mysql,
     sqlite,
+    proyectoTGGImg,
+    proyectoCssUtils,
+    proyectoTmEscapade
 } from "./assets/imgs";
 
 
@@ -336,48 +339,20 @@ const testimonios = [
 const proyectos = [
     {
         id: 0,
-        title: "TM-Escapade",
+        title: "TGG",
         content:
-            "Bienvenido a TM-Escapade, tu puerta de entrada a experiencias inolvidables en Marruecos. En TM-Escapade, no solo organizamos viajes, sino que creamos memorias que perduran toda la vida.",
-        tags: [
-            {
-                name: "experiencias",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "viajes",
-                color: "green-text-gradient",
-            },
-            {
-                name: "Marrakech",
-                color: "pink-text-gradient",
-            },
-        ],
-        backgroundImage: tmEscapadeImage,
-        source_code_link: "https://github.com/tm-escapade",
+            "Una aplicación web en React para crear gradientes CSS personalizados con colores y direcciones específicas. Fácil de usar y con código CSS generado automáticamente",
+        backgroundImage: proyectoTGGImg,
+        source_code_link: "https://github.com/T-zemmari/t_gradient_generator.git",
         icon: ''
     },
     {
         id: 1,
-        title: "TM-Escapade",
+        title: "Css Utils",
         content:
-            "Bienvenido a TM-Escapade, tu puerta de entrada a experiencias inolvidables en Marruecos. En TM-Escapade, no solo organizamos viajes, sino que creamos memorias que perduran toda la vida.",
-        tags: [
-            {
-                name: "experiencias",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "viajes",
-                color: "green-text-gradient",
-            },
-            {
-                name: "Marrakech",
-                color: "pink-text-gradient",
-            },
-        ],
-        backgroundImage: tmEscapadeImage,
-        source_code_link: "https://github.com/tm-escapade",
+            "CSS Utils: Aplicación en React + Tailwind para generar propiedades CSS personalizadas como sombras de caja y fondos ondulados.",
+        backgroundImage: proyectoCssUtils,
+        source_code_link: "https://github.com/T-zemmari/css_utils.git",
         icon: ''
     },
     {
@@ -385,70 +360,11 @@ const proyectos = [
         title: "TM-Escapade",
         content:
             "Bienvenido a TM-Escapade, tu puerta de entrada a experiencias inolvidables en Marruecos. En TM-Escapade, no solo organizamos viajes, sino que creamos memorias que perduran toda la vida.",
-        tags: [
-            {
-                name: "experiencias",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "viajes",
-                color: "green-text-gradient",
-            },
-            {
-                name: "Marrakech",
-                color: "pink-text-gradient",
-            },
-        ],
-        backgroundImage: tmEscapadeImage,
-        source_code_link: "https://github.com/tm-escapade",
+        backgroundImage: proyectoTmEscapade,
+        source_code_link: "https://github.com/T-zemmari/tm_escapade.git",
         icon: ''
     },
-    {
-        id: 3,
-        title: "TM-Escapade",
-        content:
-            "Bienvenido a TM-Escapade, tu puerta de entrada a experiencias inolvidables en Marruecos. En TM-Escapade, no solo organizamos viajes, sino que creamos memorias que perduran toda la vida.",
-        tags: [
-            {
-                name: "experiencias",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "viajes",
-                color: "green-text-gradient",
-            },
-            {
-                name: "Marrakech",
-                color: "pink-text-gradient",
-            },
-        ],
-        backgroundImage: tmEscapadeImage,
-        source_code_link: "https://github.com/tm-escapade",
-        icon: ''
-    },
-    {
-        id: 4,
-        title: "TM-Escapade",
-        content:
-            "Bienvenido a TM-Escapade, tu puerta de entrada a experiencias inolvidables en Marruecos. En TM-Escapade, no solo organizamos viajes, sino que creamos memorias que perduran toda la vida.",
-        tags: [
-            {
-                name: "experiencias",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "viajes",
-                color: "green-text-gradient",
-            },
-            {
-                name: "Marrakech",
-                color: "pink-text-gradient",
-            },
-        ],
-        backgroundImage: tmEscapadeImage,
-        source_code_link: "https://github.com/tm-escapade",
-        icon: ''
-    },
+
 ];
 
 

@@ -48,6 +48,11 @@ import icnSkills from "../icons/icn_cont_skills_1.png";
 
 import bgWaveOne from "../imgs/bgWave3.png";
 
+
+import proyectoTGGImg from '../imgs/proyectos/t_gradien_generator_2.png';
+import proyectoCssUtils from '../imgs/proyectos/landing_bg_3.png';
+import proyectoTmEscapade from '../imgs/proyectos/tm_escapade_1.png';
+
 export {
   tedyBusiness,
   matchReady,
@@ -92,5 +97,8 @@ export {
   icnAbout,
   icnSkills,
   sqlite,
-  mysql
+  mysql,
+  proyectoTGGImg,
+  proyectoCssUtils,
+  proyectoTmEscapade
 };

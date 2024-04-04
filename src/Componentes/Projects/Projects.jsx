@@ -14,13 +14,15 @@ const Projects = () => {
           ALGUNOS DE MIS PROYECTOS
         </div>
         <div className="w-full min-h-[500px] flex flex-col justify-center items-center sm:flex-row mt-12 sm:mt-36">
-          <div className="w-full sm:5/6 min-h-[500px] p-4 sm:p-10 flex flex-col flex-nowrap justify-start items-center gap-4 sm:flex-row  overflow-clip ">
+          <div className="w-full sm:5/6 min-h-[500px] p-4 sm:p-10 flex flex-col  justify-around items-center gap-4 sm:flex-row  overflow-clip ">
             {proyectos?.map((item) => {
               return (
                 <ProjectCard
                   key={item.id}
                   isActive={item.id === 2 ? true : false}
                   bgImage={item.backgroundImage}
+                  content={item.content}
+                  proyectName={item.title}
                 />
               );
             })}

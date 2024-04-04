@@ -1,9 +1,21 @@
-import "./ProjectCard.css";
+import React from "react";
+import "./ProjectCard.css"; // Asegúrate de importar el archivo de estilos CSS correspondiente
 
-const ProjectCard = ({isActive,bgImage}) => {
+const ProjectCard = ({ bgImage, content, projectName }) => {
   return (
-    <div className={`project_card w-full sm:w-[350px] h-[450px] ${isActive?'sm:h-[480px]':'sm:h-[450px]'} flex flex-col border-1  bg-white rounded-[10px] overflow-auto`}>
-     <div className={`w-full h-[35%] border-b border-orange-600 rounded-b-lg bg-center bg-cover bg-no-repeat`} style={{backgroundImage:`url(${bgImage})`}}></div>
+    <div className="project-card">
+      <div className="project-image" style={{ backgroundImage: `url(${bgImage})` }}>
+        <div className="project-overlay">
+          <h2 className="project-title">{projectName}</h2>
+        </div>
+      </div>
+      <div className="project-content">
+        <p>{content}</p>
+        <div className="project-links">
+          <a href="#" className="link">Ver más</a>
+          <a href="#" className="link">Código fuente</a>
+        </div>
+      </div>
     </div>
   );
 };
