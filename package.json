@@ -1,6 +1,5 @@
 {
-  
-  "name": "mi_porfolio",
+  "name": "new_portafolio_react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
