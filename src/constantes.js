@@ -20,7 +20,7 @@ import {
     threejs,
     tedyBusiness,
     matchReady,
-    tmEscapadeImage,
+    github1,
     miImagenUno,
     icnContact,
     icnExper,
@@ -59,7 +59,7 @@ export const navLinks = [
         title: "Skills",
     },
     {
-        id: "Mis-trabajos",
+        id: "Mis-proyectos",
         title: "Trabajos",
     },
     {
@@ -344,7 +344,7 @@ const proyectos = [
             "Una aplicación web en React para crear gradientes CSS personalizados con colores y direcciones específicas. Fácil de usar y con código CSS generado automáticamente",
         backgroundImage: proyectoTGGImg,
         source_code_link: "https://github.com/T-zemmari/t_gradient_generator.git",
-        icon: ''
+        icon: github1
     },
     {
         id: 1,
@@ -353,7 +353,7 @@ const proyectos = [
             "CSS Utils: Aplicación en React + Tailwind para generar propiedades CSS personalizadas como sombras de caja y fondos ondulados.",
         backgroundImage: proyectoCssUtils,
         source_code_link: "https://github.com/T-zemmari/css_utils.git",
-        icon: ''
+        icon: github1
     },
     {
         id: 2,
@@ -362,7 +362,7 @@ const proyectos = [
             "Bienvenido a TM-Escapade, tu puerta de entrada a experiencias inolvidables en Marruecos. En TM-Escapade, no solo organizamos viajes, sino que creamos memorias que perduran toda la vida.",
         backgroundImage: proyectoTmEscapade,
         source_code_link: "https://github.com/T-zemmari/tm_escapade.git",
-        icon: ''
+        icon: github1
     },
 
 ];

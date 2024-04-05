@@ -108,7 +108,7 @@ const About = () => {
       <div className="contenedor_header_about flex  justify-start items-center w-full h-[30px] py-14  text-white md:text-[16px] font-bold md:py-8 ">
         {displayText}
       </div>
-      <div className="contenedor_body_about w-full grid grid-cols-1 gap-8 mt-10 md:mt-5 sm:grid-cols-2 md:grid-cols-3">
+      <div className="contenedor_body_about w-full grid grid-cols-1 gap-8 mt-10 md:mt-5 md:grid-cols-2 lg:grid-cols-3">
         {cardsData.map((card, index) => (
           <div
             key={index}

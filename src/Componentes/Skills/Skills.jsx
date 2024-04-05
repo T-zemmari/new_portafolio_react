@@ -59,9 +59,9 @@ const Skills = () => {
         <div className="flex justify-start items-center w-full h-[30px] text-white md:text-[38px] font-bold md:py-6 md:mt-2">
           MIS HABILIDADES
         </div>
-        <div className="w-full min-h-[500px] flex flex-col md:flex-row gap-2">
+        <div className="w-full min-h-[500px] flex flex-col lg:flex-row gap-2">
           <div
-            className=" flex w-full md:w-3/6 h-[400px] mt-10 rounded-[10px]  flex-col md:flex-row justify-center items-center gap-2 md:flex-wrap p-4"
+            className=" flex w-full lg:w-3/6 h-[400px] mt-10 rounded-[10px] flex-col md:flex-row justify-center items-center gap-2 md:flex-wrap p-4"
             id="contenedor_tarjetas_skills"
           >
             {infoCards?.map((item) => {
@@ -75,7 +75,7 @@ const Skills = () => {
               );
             })}
           </div>
-          <div className="w-full md:w-3/6 h-[400px] flex flex-col justify-center items-start  gap-4 rounded-[10px] mt-10 border border-[#403ca3] md:p-4">
+          <div className="w-full lg:w-3/6 h-[400px] flex flex-col justify-center items-start  gap-4 rounded-[10px] mt-10 border border-[#403ca3] md:p-4">
             {arraySkills?.map((item) => {
               return <SkillCard key={item.id} level={item.level} percent_level={item.percent_level} icon={item.icon} skill={item.skill}/>;
             })}
