@@ -11,7 +11,8 @@ import SkillCard from "../SkillCard/SkillCard";
 
 const Skills = () => {
   const [arraySkills, setArraySkills] = useState([]);
-  const [activeElement, setActiveElement] = useState("Frontend"); // Estado para el elemento activo
+  const [activeElement, setActiveElement] = useState("Backend"); // Estado para el elemento activo
+  
 
   useEffect(() => {
     setArraySkills(infoSkillsFront);
