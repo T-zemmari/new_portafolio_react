@@ -3,6 +3,7 @@ import robotto from "../../assets/fonts//roboto/Roboto-Black.ttf";
 import { useState } from "react";
 
 const ProjectCard = ({
+  id,
   bgImage,
   content,
   projectName,
@@ -10,17 +11,19 @@ const ProjectCard = ({
   icon,
   iconDeploy,
   sourceDeploy,
+  style,
 }) => {
   const [expanded, setExpanded] = useState(false);
 
-  const handleShowDescrpction = () => {
+  const handleShowDescription = () => {
     setExpanded(!expanded);
   };
+
   return (
     <div
-      className={`project-card w-full lg:w-[35%]  ${
-        !expanded ? "h-[370px]" : "h-[670px]"
-      } p-4 bg-[#ffffff2e] lg:h-[370px] rounded-lg flex flex-col justify-center items-start relative`}
+      className={`project-card w-full lg:w-[35%] h-[370px] p-4 bg-[#ffffff2e] lg:h-[370px] rounded-lg flex flex-col justify-center items-start relative transition-all`}
+      id={id}
+      style={style}
     >
       <div
         className="project-image w-full h-[250px] md:h-[250px] bg-center bg-cover rounded-t-md"
@@ -34,9 +37,9 @@ const ProjectCard = ({
       <div className="w-full h-[80px] flex flex-row items-center justify-between">
         <button
           className="w-[150px] h-[45px] sm:h-[55px] border-2 border-white text-white hover:text-orange-400 font-bold flex justify-center items-center"
-          onClick={handleShowDescrpction}
+          onClick={handleShowDescription}
         >
-          Ver mas
+          Ver más
         </button>
         <div className={`flex justify-end items-center`}>
           <a

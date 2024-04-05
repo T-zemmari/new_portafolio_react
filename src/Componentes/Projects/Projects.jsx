@@ -1,8 +1,39 @@
 import ProjectCard from "../ProjectCard/ProjectCard";
 import { proyectos } from "../../constantes";
+import { useState, useEffect } from "react";
 import "./Projects.css";
 
 const Projects = () => {
+  const [showCards, setShowCards] = useState([]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const container = document.getElementById("Mis-proyectos");
+      if (!container) return;
+      const containerTop = container.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      const cardsToShow = [];
+
+      proyectos.forEach((item, index) => {
+        const card = document.getElementById(`project-card-${item.id}`);
+        if (!card) return;
+        const cardTop = card.getBoundingClientRect().top;
+
+        if (cardTop < windowHeight - containerTop) {
+          cardsToShow.push(index);
+        }
+      });
+
+      setShowCards(cardsToShow);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Llama a handleScroll() para mostrar las tarjetas al principio
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <div
@@ -15,10 +46,11 @@ const Projects = () => {
         </div>
         <div className="w-full min-h-[500px] flex flex-col justify-center items-center sm:flex-row mt-12 sm:mt-36">
           <div className="w-full min-h-[500px] p-4 sm:p-10 flex flex-col justify-around items-center gap-8 lg:gap-4 lg:flex-row ">
-            {proyectos?.map((item) => {
+            {proyectos?.map((item, index) => {
               return (
                 <ProjectCard
                   key={item.id}
+                  id={`project-card-${item.id}`}
                   isActive={item.id === 2 ? true : false}
                   bgImage={item.backgroundImage}
                   content={item.content}
@@ -27,6 +59,11 @@ const Projects = () => {
                   icon={item.icon}
                   sourceDeploy={item.sourceDeploy}
                   iconDeploy={item.iconDeploy}
+                  style={{
+                    opacity: showCards.includes(index) ? 1 : 0,
+                    transition: "opacity 0.5s ease-in-out",
+                    transitionDelay: `${index * 0.2}s`, // Ajusta el retraso de la transición
+                  }}
                 />
               );
             })}
