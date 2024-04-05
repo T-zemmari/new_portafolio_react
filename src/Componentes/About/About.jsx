@@ -5,6 +5,7 @@ const About = () => {
   const [displayText, setDisplayText] = useState("");
   const cardRefs = useRef([]);
   const [borderIntensities, setBorderIntensities] = useState([0, 0, 0]);
+  const [showCards, setShowCards] = useState([]);
 
   const handleMouseMove = (event, index) => {
     const cardRect = cardRefs.current[index].getBoundingClientRect();
@@ -96,6 +97,34 @@ const About = () => {
     },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const container = document.getElementById("Sobre-mi");
+      if (!container) return;
+      const containerTop = container.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      const cardsToShow = [];
+
+      cardsData.forEach((item, index) => {
+        const card = cardRefs.current[index];
+        if (!card) return;
+        const cardTop = card.getBoundingClientRect().top;
+
+        if (cardTop < windowHeight - containerTop && cardTop > -card.offsetHeight) {
+          cardsToShow.push(index);
+        }
+      });
+
+      setShowCards(cardsToShow);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Llama a handleScroll() para mostrar las tarjetas al principio
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div
       className="contenedor_about w-full min-h-[600px] flex flex-col justify-start items-start gap-1 mt-24 p-8 md:p-24 md:mt-24"
@@ -119,6 +148,10 @@ const About = () => {
               border: `2px solid ${card.borderColor}`,
               boxShadow: `0px 0px 10px ${card.boxShadow}`,
               filter: `brightness(${1 - borderIntensities[index]})`,
+              opacity: showCards.includes(index) ? 1 : 0,
+              transition: "opacity 0.5s ease-in-out",
+              transitionDelay: `${index * 0.2}s`,
+              
             }}
             onMouseMove={(event) => handleMouseMove(event, index)}
             onMouseLeave={() => handleMouseLeave(index)}
