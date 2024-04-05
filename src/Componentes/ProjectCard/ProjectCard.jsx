@@ -21,7 +21,7 @@ const ProjectCard = ({
 
   return (
     <div
-      className={`project-card w-full lg:w-[35%] h-[370px] p-4 bg-[#ffffff2e] lg:h-[370px] rounded-lg flex flex-col justify-center items-start relative transition-all`}
+      className={`project-card w-full lg:w-[35%] ${!expanded?'h-[370px]':'h-[770px]'} p-4 bg-[#ffffff2e] lg:h-[370px] rounded-lg flex flex-col justify-center items-start relative transition-all`}
       id={id}
       style={style}
     >
