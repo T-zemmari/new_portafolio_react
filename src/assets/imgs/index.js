@@ -53,6 +53,7 @@ import bgWaveOne from "../imgs/bgWave3.png";
 import proyectoTGGImg from '../imgs/proyectos/t_gradien_generator_2.png';
 import proyectoCssUtils from '../imgs/proyectos/landing_bg_3.png';
 import proyectoTmEscapade from '../imgs/proyectos/tm_escapade_1.png';
+import watching from '../imgs/watching_1.png';
 
 export {
   tedyBusiness,
@@ -103,4 +104,5 @@ export {
   proyectoTGGImg,
   proyectoCssUtils,
   proyectoTmEscapade,
+  watching,
 };

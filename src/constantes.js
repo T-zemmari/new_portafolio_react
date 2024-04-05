@@ -34,7 +34,8 @@ import {
     sqlite,
     proyectoTGGImg,
     proyectoCssUtils,
-    proyectoTmEscapade
+    proyectoTmEscapade,
+    watching,
 } from "./assets/imgs";
 
 
@@ -339,12 +340,14 @@ const testimonios = [
 const proyectos = [
     {
         id: 0,
-        title: "TGG",
+        title: "TM-Escapade",
         content:
-            "Una aplicación web en React para crear gradientes CSS personalizados con colores y direcciones específicas. Fácil de usar y con código CSS generado automáticamente",
-        backgroundImage: proyectoTGGImg,
-        source_code_link: "https://github.com/T-zemmari/t_gradient_generator.git",
-        icon: github1
+            "TM-Escapade es una aplicación web de agencia de viajes desarrollada en PHP con Metronic. Destaca por su enfoque en la experiencia del usuario y la facilidad de navegación. Buscamos talento para seguir mejorando la plataforma y crear experiencias únicas para nuestros usuarios",      
+        backgroundImage: proyectoTmEscapade,
+        sourceCodeLink: "https://github.com/T-zemmari/tm_escapade.git",
+        sourceDeploy:"",
+        iconDeploy:watching,
+        icon: github1,
     },
     {
         id: 1,
@@ -352,18 +355,24 @@ const proyectos = [
         content:
             "CSS Utils: Aplicación en React + Tailwind para generar propiedades CSS personalizadas como sombras de caja y fondos ondulados.",
         backgroundImage: proyectoCssUtils,
-        source_code_link: "https://github.com/T-zemmari/css_utils.git",
+        sourceCodeLink: "https://github.com/T-zemmari/css_utils.git",
+        sourceDeploy:"https://t-zemmari.github.io/css_utils",
+        iconDeploy:watching,
         icon: github1
     },
     {
         id: 2,
-        title: "TM-Escapade",
+        title: "TGG",
         content:
-            "Bienvenido a TM-Escapade, tu puerta de entrada a experiencias inolvidables en Marruecos. En TM-Escapade, no solo organizamos viajes, sino que creamos memorias que perduran toda la vida.",
-        backgroundImage: proyectoTmEscapade,
-        source_code_link: "https://github.com/T-zemmari/tm_escapade.git",
+            "Una aplicación web en React para crear gradientes CSS personalizados con colores y direcciones específicas. Fácil de usar y con código CSS generado automáticamente",
+        backgroundImage: proyectoTGGImg,
+        sourceCodeLink: "https://github.com/T-zemmari/t_gradient_generator.git",
+        sourceDeploy:"https://t-zemmari.github.io/t_gradient_generator/",
+        iconDeploy:watching,
         icon: github1
     },
+
+
 
 ];
 

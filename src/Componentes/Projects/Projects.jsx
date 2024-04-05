@@ -6,7 +6,7 @@ const Projects = () => {
   return (
     <>
       <div
-        className="contenedor_proyectos flex flex-col mt-16 p-4 md:p-16 lg:p-24 md:mt-0"
+        className="contenedor_proyectos w-full flex flex-col mt-16 p-4 md:p-16 lg:p-24 md:mt-0"
         id="Mis-proyectos"
       >
         <h1 className="text-[#b7b7b7] text-[20px] font-bold">Proyectos</h1>
@@ -22,9 +22,11 @@ const Projects = () => {
                   isActive={item.id === 2 ? true : false}
                   bgImage={item.backgroundImage}
                   content={item.content}
-                  proyectName={item.title}
-                  source_code_link={item.source_code_link}
+                  projectName={item.title}
+                  sourceCodeLink={item.sourceCodeLink}
                   icon={item.icon}
+                  sourceDeploy={item.sourceDeploy}
+                  iconDeploy={item.iconDeploy}
                 />
               );
             })}
