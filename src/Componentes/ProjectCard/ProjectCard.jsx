@@ -17,7 +17,7 @@ const ProjectCard = ({
     setExpanded(!expanded);
   };
   return (
-    <div className="project-card w-full lg:w-[35%] h-[540px] sm:h-[370px] p-4 bg-[#ffffff2e] rounded-lg flex flex-col justify-center items-center relative">
+    <div className="project-card w-full lg:w-[35%] h-[370px] p-4 bg-[#ffffff2e] rounded-lg flex flex-col justify-start items-center relative">
       <div
         className="project-image w-full h-[250px] bg-center bg-cover rounded-t-md"
         style={{ backgroundImage: `url(${bgImage})` }}
