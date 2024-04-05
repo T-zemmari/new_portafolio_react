@@ -60,7 +60,7 @@ const MenuToggleOne = () => {
           <button
             className={`menu_buttons  ${menuToggled} w-[50px] h-[50px] border-0 rounded-full  absolute -top-16 left-16 bg-center bg-cover hover:w-[60px] hover:h-[60px] hover:left[-30px]`}
             style={{ backgroundImage: `url(${icnWorks1})` }}
-            onClick={()=>scrollToSection(`Mis-trabajos`)}
+            onClick={()=>scrollToSection(`Mis-proyectos`)}
           ></button>
           <button
             className={`menu_buttons  ${menuToggled} w-[50px] h-[50px] border-0 rounded-full  absolute -top-0 left-[110px] bg-center bg-cover hover:w-[60px] hover:h-[60px] hover:left-[118px]`}

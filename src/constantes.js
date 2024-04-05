@@ -88,7 +88,7 @@ export const navLinksIcons = [
         icon: icnSkills,
     },
     {
-        id: "Mis-trabajos",
+        id: "Mis-proyectos",
         icon: icnWorks,
     },
     {
