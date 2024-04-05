@@ -298,33 +298,37 @@ const tecnologias = [
 ];
 
 const experiencias = [
-    {
-        title: "Full stack developer",
-        company_name: "Match ready",
-        icon: matchReady,
-        iconBg: "#383E56",
-        date: "Junio 2021 - Diciembre 2021",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Full stack developer",
-        company_name: "Tedy business",
+    
+        {
+        id: 0,
+        title: "Full Stack Developer",
+        company_name: "Tedy Business",
         icon: tedyBusiness,
         iconBg: "#383E56",
         date: "Diciembre 2021 - Actualmente",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Desarrollo y mantenimiento de las aplicaciones web utilizando React.js PHP Node.js y otras tecnologías relacionadas.",
+            "Creación de una aplicación desde cero para el centro de llamadas, que incluye conferencias de video y llamadas telefónicas desde la propia aplicación, utilizada para las 7 plataformas de tipo marketplace como perfumes24h.com y redperfume.com, entre otras.",
+            "Participación activa en revisiones de código y proporcionar retroalimentación constructiva para mejorar la calidad del código y la eficiencia del equipo de desarrollo.",
         ],
     },
+    {
+    id: 1,
+    title: "Full Stack Developer",
+    company_name: "Match Ready",
+    icon: matchReady,
+    iconBg: "#383E56",
+    date: "Junio 2021 - Diciembre 2021",
+    points: [
+        "Desarrollo y mantenimiento de aplicaciones web utilizando React.js y otras tecnologías relacionadas.",
+        "Colaboración con equipos multifuncionales que incluyen diseñadores, gerentes de productos y otros desarrolladores para crear productos de alta calidad.",
+        "Implementación de diseño responsivo y garantía de compatibilidad entre navegadores.",
+        "Participación en revisiones de código y brindar retroalimentación constructiva a otros desarrolladores.",
+    ],
+    },
+   
 ];
+
 
 const testimonios = [
     {
@@ -342,11 +346,11 @@ const proyectos = [
         id: 0,
         title: "TM-Escapade",
         content:
-            "TM-Escapade es una aplicación web de agencia de viajes desarrollada en PHP con Metronic. Destaca por su enfoque en la experiencia del usuario y la facilidad de navegación. Buscamos talento para seguir mejorando la plataforma y crear experiencias únicas para nuestros usuarios",      
+            "TM-Escapade es una aplicación web de agencia de viajes desarrollada en PHP con Metronic. Destaca por su enfoque en la experiencia del usuario y la facilidad de navegación. Buscamos talento para seguir mejorando la plataforma y crear experiencias únicas para nuestros usuarios",
         backgroundImage: proyectoTmEscapade,
         sourceCodeLink: "https://github.com/T-zemmari/tm_escapade.git",
-        sourceDeploy:"",
-        iconDeploy:watching,
+        sourceDeploy: "",
+        iconDeploy: watching,
         icon: github1,
     },
     {
@@ -356,8 +360,8 @@ const proyectos = [
             "CSS Utils: Aplicación en React + Tailwind para generar propiedades CSS personalizadas como sombras de caja y fondos ondulados.",
         backgroundImage: proyectoCssUtils,
         sourceCodeLink: "https://github.com/T-zemmari/css_utils.git",
-        sourceDeploy:"https://t-zemmari.github.io/css_utils",
-        iconDeploy:watching,
+        sourceDeploy: "https://t-zemmari.github.io/css_utils",
+        iconDeploy: watching,
         icon: github1
     },
     {
@@ -367,8 +371,8 @@ const proyectos = [
             "Una aplicación web en React para crear gradientes CSS personalizados con colores y direcciones específicas. Fácil de usar y con código CSS generado automáticamente",
         backgroundImage: proyectoTGGImg,
         sourceCodeLink: "https://github.com/T-zemmari/t_gradient_generator.git",
-        sourceDeploy:"https://t-zemmari.github.io/t_gradient_generator/",
-        iconDeploy:watching,
+        sourceDeploy: "https://t-zemmari.github.io/t_gradient_generator/",
+        iconDeploy: watching,
         icon: github1
     },
 
