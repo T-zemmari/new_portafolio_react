@@ -119,7 +119,7 @@ const About = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Llama a handleScroll() para mostrar las tarjetas al principio
+    handleScroll();
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };

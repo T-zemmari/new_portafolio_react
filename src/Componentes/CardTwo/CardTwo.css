@@ -18,17 +18,26 @@
   cursor: pointer;
   padding: 20px;
   transition: all 0.3s ease;
-  font-size:23px;
+  font-size: 23px;
   font-weight: 700;
 }
 
+
 .contenedor_card_two:hover {
-  transform: scale(1.05); 
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); 
-  background-color: #7e57c2;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  background-color: rgb(236, 65, 4);
 }
 
-@media (max-width:768px){
+.contenedor_card_two.active {
+  transform: scale(0.95);
+  background-color: #6f6f6f;
+}
+.contenedor_card_two.active_hover {
+  background-color: #6f6f6f;
+}
+
+
+@media (max-width: 768px) {
   .contenedor_card_two {
     width: 100%;
   }
