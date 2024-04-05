@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { experiencias } from "../../constantes";
+import './Experiences.css';
 
 const Experiences = () => {
   const containerRef = useRef(null);
@@ -56,7 +57,7 @@ const Experiences = () => {
             </div>
             <div className="company_name text-2xl">{experience.company_name}</div>
             <div className="date text-2xl">{experience.date}</div>
-            <ul className="points">
+            <ul className="points font-bold">
               {experience.points.map((point, index) => (
                 <li key={index}>{point}</li>
               ))}
