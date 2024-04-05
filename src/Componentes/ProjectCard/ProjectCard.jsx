@@ -17,9 +17,13 @@ const ProjectCard = ({
     setExpanded(!expanded);
   };
   return (
-    <div className="project-card w-full lg:w-[35%] h-[370px] p-4 bg-[#ffffff2e] rounded-lg flex flex-col justify-start items-center relative">
+    <div
+      className={`project-card w-full lg:w-[35%]  ${
+        !expanded ? "h-[370px]" : "h-[670px]"
+      } p-4 bg-[#ffffff2e] lg:h-[370px] rounded-lg flex flex-col justify-center items-start relative`}
+    >
       <div
-        className="project-image w-full h-[250px] bg-center bg-cover rounded-t-md"
+        className="project-image w-full h-[250px] md:h-[250px] bg-center bg-cover rounded-t-md"
         style={{ backgroundImage: `url(${bgImage})` }}
       ></div>
       <div className="project-overlay h-[60px] flex flex-row justify-center items-center">
@@ -29,7 +33,7 @@ const ProjectCard = ({
       </div>
       <div className="w-full h-[80px] flex flex-row items-center justify-between">
         <button
-          className="w-[150px] h-[55px] border-2 border-white text-white hover:text-orange-400 font-bold flex justify-center items-center"
+          className="w-[150px] h-[45px] sm:h-[55px] border-2 border-white text-white hover:text-orange-400 font-bold flex justify-center items-center"
           onClick={handleShowDescrpction}
         >
           Ver mas
@@ -43,7 +47,12 @@ const ProjectCard = ({
             <div
               className="link w-[50px] h-[50px] bg-center bg-cover mr-4"
               style={{ backgroundImage: `url(${iconDeploy})` }}
-            ></div>
+            >
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-[#d96716]"></span>
+              </span>
+            </div>
           </a>
           <a
             href={sourceCodeLink}
@@ -51,16 +60,16 @@ const ProjectCard = ({
             target="_blank"
           >
             <div
-              className="link w-[50px] h-[50px] bg-center bg-cover mr-4"
+              className="link w-[50px] h-[50px] bg-center bg-cover mr-4 "
               style={{ backgroundImage: `url(${icon})` }}
             ></div>
           </a>
         </div>
       </div>
       <div
-        className={`project-content h-[170px] ${
+        className={`project-content min-h-[170px] ${
           expanded ? "" : "hidden"
-        } text-white p-4 absolute bottom-[-180px] left-0 flex justify-start items-start bg-[#ffffff2e]`}
+        } text-white p-4 mt-10 lg:absolute lg:bottom-[-180px] lg:left-0 flex justify-start items-start bg-[#ffffff2e]`}
       >
         <p
           className="content_p"

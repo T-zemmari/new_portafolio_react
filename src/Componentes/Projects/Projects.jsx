@@ -6,7 +6,7 @@ const Projects = () => {
   return (
     <>
       <div
-        className="contenedor_proyectos w-full flex flex-col mt-16 p-4 md:p-16 lg:p-24 md:mt-0"
+        className="contenedor_proyectos w-full min-h-full flex flex-col mt-16 p-4 md:p-16 lg:p-24 md:mt-0"
         id="Mis-proyectos"
       >
         <h1 className="text-[#b7b7b7] text-[20px] font-bold">Proyectos</h1>
