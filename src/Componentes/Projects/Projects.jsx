@@ -19,7 +19,7 @@ const Projects = () => {
         if (!card) return;
         const cardTop = card.getBoundingClientRect().top;
 
-        if (cardTop < windowHeight - containerTop) {
+        if (cardTop < windowHeight - containerTop && cardTop > -card.offsetHeight) {
           cardsToShow.push(index);
         }
       });
@@ -28,7 +28,7 @@ const Projects = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Llama a handleScroll() para mostrar las tarjetas al principio
+    handleScroll(); // Llamo a handleScroll() para mostrar las tarjetas al principio
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -62,7 +62,7 @@ const Projects = () => {
                   style={{
                     opacity: showCards.includes(index) ? 1 : 0,
                     transition: "opacity 0.5s ease-in-out",
-                    transitionDelay: `${index * 0.2}s`, // Ajusta el retraso de la transición
+                    transitionDelay: `${index * 0.2}s`,
                   }}
                 />
               );
