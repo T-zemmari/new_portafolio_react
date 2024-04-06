@@ -13,7 +13,7 @@ const CardTwo = ({ keyID, title, onClick, active }) => {
       id={keyID}
       style={{ cursor: "pointer" }}
     >
-      <h2>{title}</h2>
+      <h2 className="text-[18px]">{title}</h2>
     </div>
   );
 };

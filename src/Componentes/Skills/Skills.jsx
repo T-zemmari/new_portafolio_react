@@ -11,7 +11,7 @@ import SkillCard from "../SkillCard/SkillCard";
 
 const Skills = () => {
   const [arraySkills, setArraySkills] = useState([]);
-  const [activeElement, setActiveElement] = useState("Backend"); // Estado para el elemento activo
+  const [activeElement, setActiveElement] = useState("Backend"); 
   
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const Skills = () => {
   }, [activeElement]);
 
   const mostrarElemento = (elemento) => {
-    setActiveElement(elemento); // Actualizar el estado del elemento activo
+    setActiveElement(elemento); 
   };
 
   const infoCards = [

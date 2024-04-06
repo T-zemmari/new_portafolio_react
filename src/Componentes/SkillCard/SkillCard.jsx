@@ -7,7 +7,7 @@ const SkillCard = ({  skill, level, percent_level, icon }) => {
         <img src={icon} alt={skill} />
       </div>
       <div className="skill-info">
-        <h3>{skill}</h3>
+        <h3 className='text-[18px]'>{skill}</h3>
         {/*<p>Nivel: {level}</p>*/}
         <div className="progress-wrapper">
           <progress value={percent_level} max="100"></progress>
