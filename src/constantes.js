@@ -219,6 +219,9 @@ export const infoSkillsUtils = [
   },
 ];
 
+
+/* Servicios*/
+
 const servicios = [
   {
     title: "Web Developer",
@@ -237,6 +240,9 @@ const servicios = [
     icon: creator,
   },
 ];
+
+
+/* Tecnologias */
 
 const tecnologias = [
   {
@@ -292,6 +298,8 @@ const tecnologias = [
     icon: docker,
   },
 ];
+
+/* Experiencias */
 
 const experiencias = [
   {
@@ -367,6 +375,8 @@ const experiencias = [
   },
 ];
 
+/* Testimnonios */
+
 const testimonios = [
   {
     testimonio:
@@ -377,6 +387,8 @@ const testimonios = [
     imagen: "",
   },
 ];
+
+/* Mis Proyectos */
 
 const proyectos = [
   {
@@ -413,5 +425,7 @@ const proyectos = [
     icon: github1,
   },
 ];
+
+
 
 export { tecnologias, experiencias, testimonios, proyectos, servicios };

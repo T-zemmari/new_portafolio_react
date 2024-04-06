@@ -11,6 +11,9 @@ const Studies = () => {
         <div className="flex justify-start items-center w-full h-[30px] text-white md:text-[38px] font-bold md:py-6 md:mt-2" id="contenedor_mis_titulaciones">
           ESTUDIOS REALIZADOS
         </div>
+        <div className="flex w-full min-h-[500px]">
+          
+        </div>
       </div>
     </>
   );
