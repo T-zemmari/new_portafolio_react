@@ -31,7 +31,7 @@ const Experiences = () => {
 
   return (
     <div
-      className="contenedor_experiencias min-h-[900px] flex flex-col mt-16 p-8 md:p-24 md:mt-0"
+      className="contenedor_experiencias w-full min-h-[900px] flex flex-col mt-16 p-8 md:p-24 md:mt-0"
       id="Experiencias"
       ref={containerRef}
     >
@@ -42,11 +42,11 @@ const Experiences = () => {
       >
         MI TRAYECTORIA LABORAL
       </div>
-      <div className="contenedor_tarjetas_experiencias w-full h-[100%] p-10 mt-24 flex flex-col gap-0 justify-center items-center ">
+      <div className="contenedor_tarjetas_experiencias w-full h-[100%] lg:p-10 mt-24 flex flex-col gap-0 justify-center items-center ">
         {experiencias.map((experience, index) => (
           <div
             key={experience.id}
-            className={`experiencia w-[90%] min-h-[250px] border-2 border-indigo-950 p-16 flex flex-col 
+            className={`experiencia w-[100%] min-h-[250px] border-2 border-indigo-950 p-16 flex flex-col 
             justify-startr items-center gap-4 bg-[#161455] rounded-xl
               ${
                 index % 2 === 0 ? "contenedor_izquierdo" : "contenedor_derecho"
