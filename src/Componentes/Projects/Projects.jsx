@@ -59,6 +59,7 @@ const Projects = () => {
                   icon={item.icon}
                   sourceDeploy={item.sourceDeploy}
                   iconDeploy={item.iconDeploy}
+                  isPrivate={item.private}
                   style={{
                     opacity: showCards.includes(index) ? 1 : 0,
                     transition: "opacity 0.5s ease-in-out",

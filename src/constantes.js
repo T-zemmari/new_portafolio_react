@@ -421,6 +421,7 @@ const testimonios = [
 const proyectos = [
   {
     id: 0,
+    private: true,
     title: "TM-Escapade",
     content:
       "TM-Escapade es una aplicación web de agencia de viajes desarrollada en PHP con Metronic. Destaca por su enfoque en la experiencia del usuario y la facilidad de navegación. Buscamos talento para seguir mejorando la plataforma y crear experiencias únicas para nuestros usuarios",
@@ -432,6 +433,7 @@ const proyectos = [
   },
   {
     id: 1,
+    private: false,
     title: "Css Utils",
     content:
       "CSS Utils: Aplicación en React + Tailwind para generar propiedades CSS personalizadas como sombras de caja y fondos ondulados.",
@@ -443,6 +445,7 @@ const proyectos = [
   },
   {
     id: 2,
+    private: false,
     title: "TGG",
     content:
       "Una aplicación web en React para crear gradientes CSS personalizados con colores y direcciones específicas. Fácil de usar y con código CSS generado automáticamente",

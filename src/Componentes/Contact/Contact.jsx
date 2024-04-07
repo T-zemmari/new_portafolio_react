@@ -56,20 +56,23 @@ const Contact = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const isValidEmail = emailRegex.test(email);
 
+    let formErrors = {};
     if (nombre === "") {
-      setErrors({ ...errors, nombre: `Por favor, ingresa tu nombre` });
+      formErrors = { ...formErrors, nombre: `Por favor, ingresa tu nombre` };
     }
     if (email === "" || !isValidEmail) {
-      setErrors({
-        ...errors,
+      formErrors = {
+        ...formErrors,
         email: `Por favor, ingresa un correo electrónico válido`,
-      });
+      };
     }
     if (mensaje === "") {
-      setErrors({ ...errors, mensaje: `El campo mensaje está vacío` });
+      formErrors = { ...formErrors, mensaje: `El campo mensaje está vacío` };
     }
 
-    if (nombre !== "" && email !== "" && mensaje !== "" && isValidEmail) {
+    setErrors(formErrors);
+
+    if (Object.keys(formErrors).length === 0) {
       emailjs
         .send(
           "service_vbri4b8",
@@ -86,6 +89,12 @@ const Contact = () => {
           (result) => {
             console.log(result.text);
             SwAlert(`Tu mensaje ha sido enviado correctamente. ¡Gracias!`);
+            setFormData({
+              nombre: "",
+              email: "",
+              mensaje: "",
+            });
+            setErrors({});
           },
           (error) => {
             console.log(error.text);
@@ -138,6 +147,7 @@ const Contact = () => {
                   initial={{ scale: 0 }}
                   animate={isVisible ? { scale: 1 } : { scale: 0 }}
                   transition={{ duration: 0.8 }}
+                  value={formData.nombre}
                 />
                 {errors.nombre && (
                   <small className="text-[#c53568]">{errors.nombre}</small>
@@ -151,6 +161,7 @@ const Contact = () => {
                   initial={{ scale: 0 }}
                   animate={isVisible ? { scale: 1 } : { scale: 0 }}
                   transition={{ duration: 1 }}
+                  value={formData.email}
                 />
                 {errors.email && (
                   <small className="text-[#c53568]">{errors.email}</small>
@@ -163,6 +174,7 @@ const Contact = () => {
                   initial={{ scale: 0 }}
                   animate={isVisible ? { scale: 1 } : { scale: 0 }}
                   transition={{ duration: 1.1 }}
+                  value={formData.mensaje}
                 ></motion.textarea>
                 {errors.mensaje && (
                   <small className="text-[#c53568]">{errors.mensaje}</small>

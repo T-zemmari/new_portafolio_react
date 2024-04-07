@@ -1,6 +1,7 @@
 import "./ProjectCard.css";
 import robotto from "../../assets/fonts//roboto/Roboto-Black.ttf";
 import { useState } from "react";
+import SwAlert from "../SwAlert/SwAlert";
 
 const ProjectCard = ({
   id,
@@ -12,6 +13,7 @@ const ProjectCard = ({
   iconDeploy,
   sourceDeploy,
   style,
+  isPrivate,
 }) => {
   const [expanded, setExpanded] = useState(false);
 
@@ -19,9 +21,15 @@ const ProjectCard = ({
     setExpanded(!expanded);
   };
 
+  const mostrarAlert=()=>{
+    SwAlert(`Este proyecto esta en privado , contacta conmigo para que te autorice`)
+  }
+
   return (
     <div
-      className={`project-card w-full lg:w-[35%] ${!expanded?'h-[370px]':'h-[770px]'} p-4 bg-[#ffffff2e] lg:h-[370px] rounded-lg flex flex-col justify-center items-start relative transition-all`}
+      className={`project-card w-full lg:w-[35%] ${
+        !expanded ? "h-[370px]" : "h-[770px]"
+      } p-4 bg-[#ffffff2e] lg:h-[370px] rounded-lg flex flex-col justify-center items-start relative transition-all`}
       id={id}
       style={style}
     >
@@ -57,16 +65,25 @@ const ProjectCard = ({
               </span>
             </div>
           </a>
-          <a
-            href={sourceCodeLink}
-            className="link h-[55px] flex justify-center items-center"
-            target="_blank"
-          >
+          {!isPrivate && (
+            <a
+              href={sourceCodeLink}
+              className="link h-[55px] flex justify-center items-center"
+              target="_blank"
+            >
+              <div
+                className="link w-[50px] h-[50px] bg-center bg-cover mr-4 "
+                style={{ backgroundImage: `url(${icon})` }}
+              ></div>
+            </a>
+          )}
+          {isPrivate && (
             <div
               className="link w-[50px] h-[50px] bg-center bg-cover mr-4 "
               style={{ backgroundImage: `url(${icon})` }}
+              onClick={mostrarAlert}
             ></div>
-          </a>
+          )}
         </div>
       </div>
       <div
