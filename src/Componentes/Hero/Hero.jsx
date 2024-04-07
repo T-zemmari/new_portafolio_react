@@ -1,5 +1,5 @@
 import { my_styles } from "../../my_styles.js";
-import { miImagUno } from "../../constantes.js";
+import { miImagUno, myLinks } from "../../constantes.js";
 import ButtonTwo from "../ButtonTwo/ButtonTwo.jsx";
 import { motion } from "framer-motion";
 import MenuToggleOne from "../MenuToggleOne/MenuToggleOne.jsx";
@@ -89,9 +89,16 @@ const Hero = () => {
             <p className={`${my_styles.heroSubText} text-white-200 mt-10`}>
               {renderTexto3}
             </p>
-            <div className="w-full flex flex-row justify-start gap-2 mt-14">
+            <div className="w-full flex flex-row justify-start items-center gap-2 mt-14">
               {/*<ButtonOne animation={"animate-left-right"}>Contacto</ButtonOne>*/}
               <ButtonTwo />
+              <div className="flex justify-center items-center lg:items-end p-12 gap-2">
+              {myLinks?.map(item=>{
+                return (<a href={item?.link} target="_blank" key={item.id}>
+                  <div className="w-[30px] h-[30px] bg-center bg-cover" style={{backgroundImage:`url(${item?.icon2})`}}></div>
+                </a>)
+              })}
+            </div>
             </div>
           </div>
         </div>

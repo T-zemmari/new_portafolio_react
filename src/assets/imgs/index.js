@@ -58,6 +58,10 @@ import facebook from "../imgs/facebook_1.png";
 import linkdin from "../imgs/linkedin_4.png";
 import github2 from "../imgs/github_3.png";
 
+import facebook2 from "../imgs/facebook_2.png";
+import linkdin2 from "../imgs/linkedin_1.png";
+import github3 from "../imgs/github_1.png";
+
 export {
   tedyBusiness,
   matchReady,
@@ -111,4 +115,7 @@ export {
   facebook,
   linkdin,
   github2,
+  facebook2,
+  linkdin2,
+  github3,
 };

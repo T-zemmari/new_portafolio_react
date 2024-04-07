@@ -39,6 +39,9 @@ import {
   facebook,
   linkdin,
   github2,
+  facebook2,
+  linkdin2,
+  github3,
 } from "./assets/imgs";
 
 export const miNombre = "Tarek";
@@ -57,18 +60,21 @@ const myLinks = [
     id: 0,
     nombre: "linkdin",
     icon: linkdin,
+    icon2: linkdin2,
     link: "https://www.linkedin.com/in/tarek-zemmari/",
   },
   {
     id: 1,
     nombre: "github",
     icon: github2,
+    icon2: github3,
     link: "https://github.com/T-zemmari/",
   },
   {
     id: 2,
     nombre: "facebook",
     icon: facebook,
+    icon2: facebook2,
     link: "https://www.facebook.com/tzemmari/",
   },
 ];
