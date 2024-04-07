@@ -73,14 +73,14 @@ const ProjectCard = ({
             >
               <div
                 className="link w-[50px] h-[50px] bg-center bg-cover mr-4 "
-                style={{ backgroundImage: `url(${icon})` }}
+                style={{ backgroundImage: `url(${icon})`,cursor:'pointer' }}
               ></div>
             </a>
           )}
           {isPrivate && (
             <div
               className="link w-[50px] h-[50px] bg-center bg-cover mr-4 "
-              style={{ backgroundImage: `url(${icon})` }}
+              style={{ backgroundImage: `url(${icon})`,cursor:'pointer' }}
               onClick={mostrarAlert}
             ></div>
           )}
