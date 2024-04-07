@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import "./Contact.css";
 import SwAlert from "../SwAlert/SwAlert";
-import {myLinks} from "../../constantes";
+import { myLinks } from "../../constantes";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -17,18 +18,31 @@ const Contact = () => {
     mensaje: "",
   });
 
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const contactoDiv = document.getElementById("Contacto");
+      if (!contactoDiv) return;
+
+      const rect = contactoDiv.getBoundingClientRect();
+      setIsVisible(rect.top < window.innerHeight && rect.bottom >= 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const handleChange = (e) => {
     const { id, value } = e.target;
-    console.log(id,value);
     setFormData({ ...formData, [id]: value });
-  
-    if (value.trim() === '') {
+
+    if (value.trim() === "") {
       setErrors({ ...errors, [id]: `Por favor, ingresa tu ${id}` });
     } else {
-      setErrors({ ...errors, [id]: '' });
+      setErrors({ ...errors, [id]: "" });
     }
   };
-  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,10 +54,10 @@ const Contact = () => {
           "service_vbri4b8",
           "template_9k463tc",
           {
-            'subject':'Hola de parte de '+nombre,
-            'name':nombre,
-            'email':email,
-            'message':mensaje,
+            subject: "Hola de parte de " + nombre,
+            name: nombre,
+            email: email,
+            message: mensaje,
           },
           "J5IKpSLiG5SGLK5pD"
         )
@@ -58,7 +72,7 @@ const Contact = () => {
           }
         );
     } else {
-      SwAlert(`Porfavor rellena al formulario correctamente`);
+      SwAlert(`Por favor rellena el formulario correctamente`);
     }
   };
 
@@ -68,7 +82,6 @@ const Contact = () => {
         className="contenedor_contact flex flex-col mt-16 p-12 md:py-2 md:px-24 md:mt-0"
         id="Contacto"
       >
-        
         <h1 className="text-[#b7b7b7] text-[20px] font-bold">Contacto</h1>
         <div className="flex justify-start items-center w-full h-[30px] text-white md:text-[38px] font-bold md:py-6 md:mt-2">
           RELLENA EL SIGUIENTE FORMULARIO
@@ -77,10 +90,15 @@ const Contact = () => {
         <div className="w-full mt-24 lg:h-[720px] lg:h-[620px]  flex justify-center items-center ">
           <div className="formulario_padre w-[100%] md:w-[60%] h-[90%] border-2 border-[#161455] bg-[#161455] flex flex-col-reverse md:flex-row justify-start">
             <div className="div_lateral w-[100%] h-[100px] md:w-[20%] md:h-[100%] bg-[#7e57c2] flex justify-center items-center lg:items-end p-12 gap-2">
-              {myLinks?.map(item=>{
-                return (<a href={item?.link} target="_blank" key={item.id}>
-                  <div className="w-[30px] h-[30px] bg-center bg-cover" style={{backgroundImage:`url(${item?.icon})`}}></div>
-                </a>)
+              {myLinks?.map((item) => {
+                return (
+                  <a href={item?.link} target="_blank" key={item.id}>
+                    <div
+                      className="w-[30px] h-[30px] bg-center bg-cover"
+                      style={{ backgroundImage: `url(${item?.icon})` }}
+                    ></div>
+                  </a>
+                );
               })}
             </div>
             <div className="contacto_campos ld:w-[80%] p-6 lg:py-12 lg:px-24">
@@ -89,33 +107,42 @@ const Contact = () => {
                 Siéntete libre de contactarnos en cualquier momento. Nos
                 pondremos en contacto contigo tan pronto como sea posible!
               </p>
-              <form onSubmit={handleSubmit}>
-                <input
+              <form onSubmit={handleSubmit} className="lg:p-12">
+                <motion.input
                   type="text"
                   className="form-control form-group"
                   placeholder="Nombre"
                   id="nombre"
                   onChange={handleChange}
+                  initial={{ scale: 0 }}
+                  animate={isVisible ? { scale: 1 } : { scale: 0 }}
+                  transition={{ duration: 0.8 }}
                 />
                 {errors.nombre && (
                   <small className="text-[#c53568]">{errors.nombre}</small>
                 )}
-                <input
+                <motion.input
                   type="email"
                   className="form-control form-group"
                   placeholder="Email"
                   id="email"
                   onChange={handleChange}
+                  initial={{ scale: 0 }}
+                  animate={isVisible ? { scale: 1 } : { scale: 0 }}
+                  transition={{ duration: 1 }}
                 />
                 {errors.email && (
                   <small className="text-[#c53568]">{errors.email}</small>
                 )}
-                <textarea
+                <motion.textarea
                   className="form-control form-group min-h-[65px]"
                   placeholder="Mensaje"
                   id="mensaje"
                   onChange={handleChange}
-                ></textarea>
+                  initial={{ scale: 0 }}
+                  animate={isVisible ? { scale: 1 } : { scale: 0 }}
+                  transition={{ duration: 1.1 }}
+                ></motion.textarea>
                 {errors.mensaje && (
                   <small className="text-[#c53568]">{errors.mensaje}</small>
                 )}
