@@ -49,11 +49,14 @@ import icnSkills from "../icons/icn_cont_skills_1.png";
 
 import bgWaveOne from "../imgs/bgWave3.png";
 
+import proyectoTGGImg from "../imgs/proyectos/t_gradien_generator_2.png";
+import proyectoCssUtils from "../imgs/proyectos/landing_bg_3.png";
+import proyectoTmEscapade from "../imgs/proyectos/tm_escapade_1.png";
+import watching from "../imgs/watching_1.png";
 
-import proyectoTGGImg from '../imgs/proyectos/t_gradien_generator_2.png';
-import proyectoCssUtils from '../imgs/proyectos/landing_bg_3.png';
-import proyectoTmEscapade from '../imgs/proyectos/tm_escapade_1.png';
-import watching from '../imgs/watching_1.png';
+import facebook from "../imgs/facebook_1.png";
+import linkdin from "../imgs/linkedin_4.png";
+import github2 from "../imgs/github_3.png";
 
 export {
   tedyBusiness,
@@ -105,4 +108,7 @@ export {
   proyectoCssUtils,
   proyectoTmEscapade,
   watching,
+  facebook,
+  linkdin,
+  github2,
 };

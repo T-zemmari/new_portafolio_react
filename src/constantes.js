@@ -36,6 +36,9 @@ import {
   proyectoCssUtils,
   proyectoTmEscapade,
   watching,
+  facebook,
+  linkdin,
+  github2,
 } from "./assets/imgs";
 
 export const miNombre = "Tarek";
@@ -48,6 +51,27 @@ export const icnTitul1 = icnTitul;
 export const icnWorks1 = icnWorks;
 
 export const bgWave1 = bgWaveOne;
+
+const myLinks = [
+  {
+    id: 0,
+    nombre: "linkdin",
+    icon: linkdin,
+    link: "https://www.linkedin.com/in/tarek-zemmari/",
+  },
+  {
+    id: 1,
+    nombre: "github",
+    icon: github2,
+    link: "https://github.com/T-zemmari/",
+  },
+  {
+    id: 2,
+    nombre: "facebook",
+    icon: facebook,
+    link: "https://www.facebook.com/tzemmari/",
+  },
+];
 
 export const navLinks = [
   {
@@ -219,7 +243,6 @@ export const infoSkillsUtils = [
   },
 ];
 
-
 /* Servicios*/
 
 const servicios = [
@@ -240,7 +263,6 @@ const servicios = [
     icon: creator,
   },
 ];
-
 
 /* Tecnologias */
 
@@ -426,6 +448,4 @@ const proyectos = [
   },
 ];
 
-
-
-export { tecnologias, experiencias, testimonios, proyectos, servicios };
+export { tecnologias, experiencias, testimonios, proyectos, servicios ,myLinks};
