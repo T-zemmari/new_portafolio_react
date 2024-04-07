@@ -33,6 +33,10 @@ const Contact = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    console.log(errors);
+  }, [errors]);
+
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData({ ...formData, [id]: value });
@@ -48,7 +52,24 @@ const Contact = () => {
     e.preventDefault();
     const { nombre, email, mensaje } = formData;
 
-    if (nombre !== "" && email !== "" && mensaje !== "") {
+    // Validar correo electrónico utilizando la expresión regular
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValidEmail = emailRegex.test(email);
+
+    if (nombre === "") {
+      setErrors({ ...errors, nombre: `Por favor, ingresa tu nombre` });
+    }
+    if (email === "" || !isValidEmail) {
+      setErrors({
+        ...errors,
+        email: `Por favor, ingresa un correo electrónico válido`,
+      });
+    }
+    if (mensaje === "") {
+      setErrors({ ...errors, mensaje: `El campo mensaje está vacío` });
+    }
+
+    if (nombre !== "" && email !== "" && mensaje !== "" && isValidEmail) {
       emailjs
         .send(
           "service_vbri4b8",
@@ -64,7 +85,7 @@ const Contact = () => {
         .then(
           (result) => {
             console.log(result.text);
-            SwAlert(`Tu mensaje ha sido enviado correctamente Gracias!`);
+            SwAlert(`Tu mensaje ha sido enviado correctamente. ¡Gracias!`);
           },
           (error) => {
             console.log(error.text);
@@ -72,7 +93,7 @@ const Contact = () => {
           }
         );
     } else {
-      SwAlert(`Por favor rellena el formulario correctamente`);
+      SwAlert(`Por favor, rellena el formulario correctamente`);
     }
   };
 
