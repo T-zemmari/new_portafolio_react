@@ -4,6 +4,7 @@ import ButtonTwo from "../ButtonTwo/ButtonTwo.jsx";
 import { motion } from "framer-motion";
 import MenuToggleOne from "../MenuToggleOne/MenuToggleOne.jsx";
 import { useEffect, useState } from "react";
+import DownloadButton from "../ButtonDownloadPdf/ButtonDownloadPdf.jsx";
 
 
 const Hero = () => {
@@ -99,6 +100,7 @@ const Hero = () => {
                 </a>)
               })}
             </div>
+            <DownloadButton/>
             </div>
           </div>
         </div>
