@@ -96,10 +96,10 @@ export const navLinks = [
     id: "Experiencias",
     title: "Experiencias",
   },
-  {
-    id: "Estudios",
-    title: "Titulos",
-  },
+  // {
+  //   id: "Estudios",
+  //   title: "Titulos",
+  // },
   {
     id: "Contacto",
     title: "Contacto",
@@ -123,10 +123,10 @@ export const navLinksIcons = [
     id: "Experiencias",
     icon: icnExper,
   },
-  {
-    id: "Estudios",
-    icon: icnTitul,
-  },
+  // {
+  //   id: "Estudios",
+  //   icon: icnTitul,
+  // },
   {
     id: "Contacto",
     icon: icnContact,
