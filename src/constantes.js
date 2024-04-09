@@ -52,6 +52,7 @@ export const icnContact1 = icnContact;
 export const icnExper1 = icnExper;
 export const icnTitul1 = icnTitul;
 export const icnWorks1 = icnWorks;
+export const icnSkills1 = icnSkills;
 
 export const bgWave1 = bgWaveOne;
 
