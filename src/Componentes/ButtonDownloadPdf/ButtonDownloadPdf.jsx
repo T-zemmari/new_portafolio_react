@@ -16,7 +16,7 @@ const DownloadButton = () => {
       <div>
         <button
           onClick={onButtonClick}
-          style={{ color: "#f7971e", fontWeight: "600" }}
+          style={{ color: "#915eff", fontWeight: "600" }}
         >
           Descargar CV
         </button>
