@@ -22,7 +22,7 @@ const ProjectCard = ({
   };
 
   const mostrarAlert=()=>{
-    SwAlert(`Este proyecto esta en privado , contacta conmigo para que te autorice`)
+    SwAlert(`Este proyecto está actualmente en modo privado. Por favor, contáctame para obtener acceso autorizado`)
   }
 
   return (
@@ -50,7 +50,8 @@ const ProjectCard = ({
           Ver más
         </button>
         <div className={`flex justify-end items-center`}>
-          <a
+          
+        {!isPrivate && (<a
             href={sourceDeploy}
             className="link h-[55px] flex justify-center items-center"
             target="_blank"
@@ -64,7 +65,7 @@ const ProjectCard = ({
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-[#d96716]"></span>
               </span>
             </div>
-          </a>
+          </a>)}
           {!isPrivate && (
             <a
               href={sourceCodeLink}
