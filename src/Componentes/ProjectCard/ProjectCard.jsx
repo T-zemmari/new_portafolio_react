@@ -21,9 +21,11 @@ const ProjectCard = ({
     setExpanded(!expanded);
   };
 
-  const mostrarAlert=()=>{
-    SwAlert(`Este proyecto está actualmente en modo privado. Por favor, contáctame para obtener acceso autorizado`)
-  }
+  const mostrarAlert = () => {
+    SwAlert(
+      `Este proyecto está actualmente en modo privado. Por favor, contáctame para obtener acceso autorizado`
+    );
+  };
 
   return (
     <div
@@ -50,38 +52,45 @@ const ProjectCard = ({
           Ver más
         </button>
         <div className={`flex justify-end items-center`}>
-          
-        {!isPrivate && (<a
-            href={sourceDeploy}
-            className="link h-[55px] flex justify-center items-center"
-            target="_blank"
-          >
-            <div
-              className="link w-[50px] h-[50px] bg-center bg-cover mr-4"
-              style={{ backgroundImage: `url(${iconDeploy})` }}
-            >
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-[#d96716]"></span>
-              </span>
-            </div>
-          </a>)}
-          {!isPrivate && (
+          {!isPrivate && sourceDeploy &&
+            sourceDeploy !==
+              "" &&(
             <a
-              href={sourceCodeLink}
+              href={sourceDeploy}
               className="link h-[55px] flex justify-center items-center"
               target="_blank"
             >
               <div
-                className="link w-[50px] h-[50px] bg-center bg-cover mr-4 "
-                style={{ backgroundImage: `url(${icon})`,cursor:'pointer' }}
-              ></div>
+                className="link w-[50px] h-[50px] bg-center bg-cover mr-4"
+                style={{ backgroundImage: `url(${iconDeploy})` }}
+              >
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-[#d96716]"></span>
+                </span>
+              </div>
             </a>
           )}
+          {!isPrivate &&
+            (
+                <a
+                  href={sourceCodeLink}
+                  className="link h-[55px] flex justify-center items-center"
+                  target="_blank"
+                >
+                  <div
+                    className="link w-[50px] h-[50px] bg-center bg-cover mr-4 "
+                    style={{
+                      backgroundImage: `url(${icon})`,
+                      cursor: "pointer",
+                    }}
+                  ></div>
+                </a>
+              )}
           {isPrivate && (
             <div
               className="link w-[50px] h-[50px] bg-center bg-cover mr-4 "
-              style={{ backgroundImage: `url(${icon})`,cursor:'pointer' }}
+              style={{ backgroundImage: `url(${icon})`, cursor: "pointer" }}
               onClick={mostrarAlert}
             ></div>
           )}

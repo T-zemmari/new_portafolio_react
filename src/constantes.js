@@ -422,7 +422,7 @@ const testimonios = [
 const proyectos = [
   {
     id: 0,
-    private: true,
+    private: false,
     title: "TM-Escapade",
     content:
       "TM-Escapade es una aplicación web de agencia de viajes desarrollada en PHP con Metronic. Destaca por su enfoque en la experiencia del usuario y la facilidad de navegación. Buscamos talento para seguir mejorando la plataforma y crear experiencias únicas para nuestros usuarios",
