@@ -110,7 +110,7 @@ const Skills = () => {
           ref={cardsRef}
           initial={{ y: "-100%", opacity: 0 }}
           animate={showCards.includes(cardsRef.current) ? { y: 0, opacity: 1 } : {}}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.3 }}
           className="flex w-full lg:w-3/6 h-[400px] mt-10 rounded-[10px] flex-col md:flex-row justify-center items-center gap-2 md:flex-wrap p-4 lg:mt-32"
           id="contenedor_tarjetas_skills"
         >
@@ -128,7 +128,7 @@ const Skills = () => {
           ref={skillsRef}
           initial={{ y: "100%", opacity: 0 }}
           animate={showCards.includes(skillsRef.current) ? { y: 0, opacity: 1 } : {}}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.3 }}
           className="w-full lg:w-3/6 h-[400px] flex flex-col justify-center items-start  gap-4 rounded-[10px] mt-10 border border-[#403ca3] md:p-4 lg:mt-32"
           id="contenedor_info_skills"
         >
