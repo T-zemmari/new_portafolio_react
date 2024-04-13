@@ -45,7 +45,7 @@ import {
 } from "./assets/imgs";
 
 export const miNombre = "Tarek";
-export const misApellidos = "Zemmari Kissani";
+export const misApellidos = "Zemmari";
 export const miImagUno = miImagenUno;
 
 export const icnContact1 = icnContact;
