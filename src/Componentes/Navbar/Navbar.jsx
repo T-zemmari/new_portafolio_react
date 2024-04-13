@@ -29,7 +29,7 @@ const Navbar = () => {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
-      const offset = section.offsetTop - 78; // Calcula la posición 50px antes del inicio de la sección
+      const offset = section.offsetTop - 78; // Calcula la posición 78px antes del inicio de la sección
       window.scrollTo({
         top: offset,
         behavior: "smooth"
@@ -120,14 +120,14 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl bg-[#7800e7a1]`}
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl bg-[#ec4104]`}
           >
             <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
               {navLinks.map((nav) => (
                 <li
                   key={nav.id}
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.id ? "text-white" : "text-purple-400"
+                    active === nav.id ? "text-white" : "text-white"
                   }`}
                   onClick={() => handleClick(nav.id, "movil")}
                 >

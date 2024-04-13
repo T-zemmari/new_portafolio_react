@@ -38,7 +38,7 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-import miImagenUno from "./mis_fotos/yo_5.png";
+import miImagenUno from "./mis_fotos/yo_6.png";
 
 import icnContact from "../icons/icn_cont_email_4.png";
 import icnExper from "../icons/icn_cont_experiencias_2.png";

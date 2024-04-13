@@ -114,7 +114,7 @@ const Contact = () => {
       >
         <h1 className="text-[#b7b7b7] text-[20px] font-bold">Contacto</h1>
         <div className="flex justify-start items-center w-full h-[30px] text-white md:text-[38px] font-bold md:py-6 md:mt-2">
-          RELLENA EL SIGUIENTE FORMULARIO
+            POR FAVOR, RELLENA EL SIGUIENTE FORMULARIO
         </div>
 
         <div className="w-full mt-24 lg:h-[720px] lg:h-[620px]  flex justify-center items-center ">

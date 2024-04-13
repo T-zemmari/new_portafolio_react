@@ -427,7 +427,7 @@ const proyectos = [
     content:
       "TM-Escapade es una aplicación web de agencia de viajes desarrollada en PHP con Metronic. Destaca por su enfoque en la experiencia del usuario y la facilidad de navegación. Buscamos talento para seguir mejorando la plataforma y crear experiencias únicas para nuestros usuarios",
     backgroundImage: proyectoTmEscapade,
-    sourceCodeLink: "https://github.com/T-zemmari/tm_escapade.git",
+    sourceCodeLink: "https://github.com/T-zemmari/tm_escapade_docker",
     sourceDeploy: "",
     iconDeploy: watching,
     icon: github1,

@@ -46,7 +46,7 @@ const About = () => {
   }, []);
 
   const text =
-    "Soy un desarrollador apasionado con experiencia en React, PHP y otras tecnologías.";
+    "Soy un desarrollador apasionado con experiencia en PHP , React y otras tecnologías.";
 
   const texto_1 = `
     <p class="text-white">
