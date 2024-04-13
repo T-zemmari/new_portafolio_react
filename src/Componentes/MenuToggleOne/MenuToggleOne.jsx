@@ -5,6 +5,8 @@ import {
   icnTitul1,
   icnWorks1,
   bgWave1,
+  icnSkills1,
+
 } from "../../constantes.js";
 import "./MenuToggleOne.css";
 
@@ -64,8 +66,8 @@ const MenuToggleOne = () => {
           ></button>
           <button
             className={`menu_buttons  ${menuToggled} w-[50px] h-[50px] border-0 rounded-full  absolute -top-0 left-[110px] bg-center bg-cover hover:w-[60px] hover:h-[60px] hover:left-[118px]`}
-            style={{ backgroundImage: `url(${icnTitul1})` }}
-            onClick={()=>scrollToSection('Estudios')}
+            style={{ backgroundImage: `url(${icnSkills1})` }}
+            onClick={()=>scrollToSection('Skills')}
           ></button>
         </div>
       </div>

@@ -52,6 +52,7 @@ export const icnContact1 = icnContact;
 export const icnExper1 = icnExper;
 export const icnTitul1 = icnTitul;
 export const icnWorks1 = icnWorks;
+export const icnSkills1 = icnSkills;
 
 export const bgWave1 = bgWaveOne;
 
@@ -96,10 +97,10 @@ export const navLinks = [
     id: "Experiencias",
     title: "Experiencias",
   },
-  {
-    id: "Estudios",
-    title: "Titulos",
-  },
+  // {
+  //   id: "Estudios",
+  //   title: "Titulos",
+  // },
   {
     id: "Contacto",
     title: "Contacto",
@@ -123,10 +124,10 @@ export const navLinksIcons = [
     id: "Experiencias",
     icon: icnExper,
   },
-  {
-    id: "Estudios",
-    icon: icnTitul,
-  },
+  // {
+  //   id: "Estudios",
+  //   icon: icnTitul,
+  // },
   {
     id: "Contacto",
     icon: icnContact,

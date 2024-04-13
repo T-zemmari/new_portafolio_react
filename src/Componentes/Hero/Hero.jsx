@@ -4,7 +4,7 @@ import ButtonTwo from "../ButtonTwo/ButtonTwo.jsx";
 import { motion } from "framer-motion";
 import MenuToggleOne from "../MenuToggleOne/MenuToggleOne.jsx";
 import { useEffect, useState } from "react";
-
+import DownloadButton from "../ButtonDownloadPdf/ButtonDownloadPdf.jsx";
 
 const Hero = () => {
   const [mostrarTexto2, setMostrarTexto2] = useState(false);
@@ -15,7 +15,8 @@ const Hero = () => {
 
   const texto1 = "Hola, soy";
   const texto2 = "Tarek";
-  const texto3 ="Programador y desarrollador full stack,especializado en crear soluciones web completas.";
+  const texto3 =
+    "Programador y desarrollador full stack,especializado en crear soluciones web completas.";
 
   useEffect(() => {
     const interval1 = setInterval(() => {
@@ -32,23 +33,22 @@ const Hero = () => {
     return () => clearInterval(interval1);
   }, []);
 
-  useEffect(() => {   
-      const interval2 = setInterval(() => {
-        setRenderTexto2((prevText) => {
-          if (prevText.length < texto2.length) {
-            return texto2.substring(0, prevText.length + 1);
-          } else {
-            clearInterval(interval2);
-            setMostrarTexto3(true);
-            return prevText;
-          }
-        });
-      }, 100);
-      return () => clearInterval(interval2);
-   
+  useEffect(() => {
+    const interval2 = setInterval(() => {
+      setRenderTexto2((prevText) => {
+        if (prevText.length < texto2.length) {
+          return texto2.substring(0, prevText.length + 1);
+        } else {
+          clearInterval(interval2);
+          setMostrarTexto3(true);
+          return prevText;
+        }
+      });
+    }, 100);
+    return () => clearInterval(interval2);
   }, [mostrarTexto2]);
 
-  useEffect(() => {   
+  useEffect(() => {
     const interval3 = setInterval(() => {
       setRenderTexto3((prevText) => {
         if (prevText.length < texto3.length) {
@@ -60,8 +60,7 @@ const Hero = () => {
       });
     }, 30);
     return () => clearInterval(interval3);
- 
-}, [mostrarTexto3]);
+  }, [mostrarTexto3]);
 
   return (
     <>
@@ -69,8 +68,9 @@ const Hero = () => {
         id="hero_container"
         className={`w-full min-h-full mt-28 py-0 flex flex-col md:flex-row md:items-start lg:px-5 lg:mt-40 lg:p[120px] `}
       >
-        <div className={`w-full h-5/6 flex flex-row items-start justify-start gap-5 sm:w-3/6 lg:w-3/6 ${my_styles.paddingX} `}>
-          
+        <div
+          className={`w-full h-5/6 flex flex-row items-start justify-start gap-5 sm:w-3/6 lg:w-3/6 ${my_styles.paddingX} `}
+        >
           <div>
             <h1 className={`${my_styles.heroHeadText} text-white`}>
               {renderTexto1}{" "}
@@ -93,12 +93,18 @@ const Hero = () => {
               {/*<ButtonOne animation={"animate-left-right"}>Contacto</ButtonOne>*/}
               <ButtonTwo />
               <div className="flex justify-center items-center lg:items-end p-12 gap-2">
-              {myLinks?.map(item=>{
-                return (<a href={item?.link} target="_blank" key={item.id}>
-                  <div className="w-[30px] h-[30px] bg-center bg-cover" style={{backgroundImage:`url(${item?.icon2})`}}></div>
-                </a>)
-              })}
-            </div>
+                {myLinks?.map((item) => {
+                  return (
+                    <a href={item?.link} target="_blank" key={item.id}>
+                      <div
+                        className="w-[30px] h-[30px] bg-center bg-cover"
+                        style={{ backgroundImage: `url(${item?.icon2})` }}
+                      ></div>
+                    </a>
+                  );
+                })}
+              </div>
+              <DownloadButton />
             </div>
           </div>
         </div>
