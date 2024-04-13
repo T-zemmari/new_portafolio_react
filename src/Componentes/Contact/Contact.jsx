@@ -33,10 +33,6 @@ const Contact = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    console.log(errors);
-  }, [errors]);
-
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData({ ...formData, [id]: value });
@@ -112,12 +108,29 @@ const Contact = () => {
         className="contenedor_contact flex flex-col mt-16 p-12 md:py-2 md:px-24 md:mt-0"
         id="Contacto"
       >
-        <h1 className="text-[#b7b7b7] text-[20px] font-bold">Contacto</h1>
-        <div className="flex justify-start items-center w-full h-[30px] text-white md:text-[38px] font-bold md:py-6 md:mt-2">
-            POR FAVOR, RELLENA EL SIGUIENTE FORMULARIO
-        </div>
+        <motion.h1
+          className="text-[#b7b7b7] text-[20px] font-bold"
+          initial={{ y: 100, opacity: 0 }}
+          animate={isVisible ? { y: 0, opacity: 1 } : {}}
+          transition={{ duration: 0.8 }}
+        >
+          Contacto
+        </motion.h1>
+        <motion.div
+          className="flex justify-start items-center w-full h-[30px] text-white md:text-[38px] font-bold md:py-6 md:mt-2"
+          initial={{ y: 100, opacity: 0 }}
+          animate={isVisible ? { y: 0, opacity: 1 } : {}}
+          transition={{ duration: 0.8 }}
+        >
+          POR FAVOR, RELLENA EL SIGUIENTE FORMULARIO
+        </motion.div>
 
-        <div className="w-full mt-24 lg:h-[720px] lg:h-[620px]  flex justify-center items-center ">
+        <motion.div
+          className="w-full mt-24 lg:h-[720px] lg:h-[620px]  flex justify-center items-center "
+          initial={{ y: 100, opacity: 0 }}
+          animate={isVisible ? { y: 0, opacity: 1 } : {}}
+          transition={{ duration: 0.8 }}
+        >
           <div className="formulario_padre w-[100%] md:w-[60%] h-[90%] border-2 border-[#161455] bg-[#161455] flex flex-col-reverse md:flex-row justify-start">
             <div className="div_lateral w-[100%] h-[100px] md:w-[20%] md:h-[100%] bg-[#7e57c2] flex justify-center items-center lg:items-end p-12 gap-2">
               {myLinks?.map((item) => {
@@ -179,13 +192,19 @@ const Contact = () => {
                 {errors.mensaje && (
                   <small className="text-[#c53568]">{errors.mensaje}</small>
                 )}
-                <button type="submit" className="form_submit">
+                <motion.button
+                  type="submit"
+                  className="form_submit"
+                  initial={{ scale: 0 }}
+                  animate={isVisible ? { scale: 1 } : { scale: 0 }}
+                  transition={{ duration: 1.2 }}
+                >
                   Enviar
-                </button>
+                </motion.button>
               </form>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );
