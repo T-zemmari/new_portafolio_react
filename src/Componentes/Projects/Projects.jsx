@@ -19,7 +19,10 @@ const Projects = () => {
         if (!card) return;
         const cardTop = card.getBoundingClientRect().top;
 
-        if (cardTop < windowHeight - containerTop && cardTop > -card.offsetHeight) {
+        if (
+          cardTop < windowHeight - containerTop &&
+          cardTop > -card.offsetHeight
+        ) {
           cardsToShow.push(index);
         }
       });
@@ -28,7 +31,7 @@ const Projects = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Llamo a handleScroll() para mostrar las tarjetas al principio
+    handleScroll();
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -44,8 +47,8 @@ const Projects = () => {
         <div className="flex justify-start items-center w-full h-[30px] text-white md:text-[38px] font-bold md:py-6 md:mt-2">
           ALGUNOS DE MIS PROYECTOS
         </div>
-        <div className="w-full min-h-[500px] flex flex-col justify-center items-center sm:flex-row mt-12 sm:mt-36">
-          <div className="w-full min-h-[500px] p-4 sm:p-10 flex flex-col justify-around items-center gap-8 lg:gap-4 lg:flex-row ">
+        <div className="w-full flex justify-center items-center">
+          <div className="w-full lg:w-[70%] grid grid-cols-1 sm:grid-cols-2 gap-12 mt-12 sm:mt-36 justify-center">
             {proyectos?.map((item, index) => {
               return (
                 <ProjectCard
