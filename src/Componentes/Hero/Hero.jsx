@@ -94,12 +94,12 @@ const Hero = () => {
               <div className="w-full flex flex-col md:flex-row justify-start items-center gap-2 mt-14">
                 {/*<ButtonOne animation={"animate-left-right"}>Contacto</ButtonOne>*/}
                 <ButtonTwo />
-                <div className="flex justify-center items-center lg:items-end p-12 gap-4">
+                <div className="flex justify-center items-center lg:items-end p-12 gap-2">
                   {myLinks?.map((item) => {
                     return (
                       <a href={item?.link} target="_blank" key={item.id}>
                         <div
-                          className="w-[40px] h-[40px] bg-center bg-cover"
+                          className="w-[30px] h-[30px] bg-center bg-cover"
                           style={{ backgroundImage: `url(${item?.icon2})` }}
                         ></div>
                       </a>
@@ -123,7 +123,7 @@ const Hero = () => {
             ></motion.div>
           </div>
         </section>
-        <section className={`w-full h-[300px]`}>
+        <section className={`w-full h-[300px] -mt-28`}>
           <MenuToggleOne />
         </section>
       </div>
