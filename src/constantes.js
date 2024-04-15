@@ -72,13 +72,13 @@ const myLinks = [
     icon2: github3,
     link: "https://github.com/T-zemmari/",
   },
-  {
-    id: 2,
-    nombre: "facebook",
-    icon: facebook,
-    icon2: facebook2,
-    link: "https://www.facebook.com/tzemmari/",
-  },
+  // {
+  //   id: 2,
+  //   nombre: "facebook",
+  //   icon: facebook,
+  //   icon2: facebook2,
+  //   link: "https://www.facebook.com/tzemmari/",
+  // },
 ];
 
 export const navLinks = [
