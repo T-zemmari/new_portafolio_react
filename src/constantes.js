@@ -35,6 +35,7 @@ import {
   proyectoTGGImg,
   proyectoCssUtils,
   proyectoTmEscapade,
+  proyectoMyUtilsImg,
   watching,
   facebook,
   linkdin,
@@ -456,6 +457,19 @@ const proyectos = [
     iconDeploy: watching,
     icon: github1,
   },
+  {
+    id: 3,
+    private: false,
+    title: "MyUtils",
+    content:
+      "MyUtils es una herramienta desarrollada con Django y Python que utiliza Docker para contenerizar la aplicación, Nginx como servidor web y Stripe para procesar pagos. Está diseñada para proporcionar varias funcionalidades útiles, como unir PDF, firmar PDF, cambiar resolución de imágenes, unir videos y crear CV.",
+    backgroundImage: proyectoMyUtilsImg,
+    sourceCodeLink: "https://github.com/T-zemmari/myutils_docker_stripe.git",
+    sourceDeploy: "",
+    iconDeploy: watching,
+    icon: github1,
+  },
 ];
 
-export { tecnologias, experiencias, testimonios, proyectos, servicios ,myLinks};
+
+export { tecnologias, experiencias, testimonios, proyectos, servicios, myLinks };

@@ -52,6 +52,7 @@ import bgWaveOne from "../imgs/bgWave3.png";
 import proyectoTGGImg from "../imgs/proyectos/t_gradien_generator_2.png";
 import proyectoCssUtils from "../imgs/proyectos/landing_bg_3.png";
 import proyectoTmEscapade from "../imgs/proyectos/tm_escapade_1.png";
+import proyectoMyUtilsImg from "../imgs/proyectos/unir_pdfs_1.png";
 import watching from "../imgs/watching_1.png";
 
 import facebook from "../imgs/facebook_1.png";
@@ -111,6 +112,7 @@ export {
   proyectoTGGImg,
   proyectoCssUtils,
   proyectoTmEscapade,
+  proyectoMyUtilsImg,
   watching,
   facebook,
   linkdin,
