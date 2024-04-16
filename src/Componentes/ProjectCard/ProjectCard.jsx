@@ -36,7 +36,7 @@ const ProjectCard = ({
       style={style}
     >
       <div
-        className="project-image w-full h-[250px] md:h-[250px] bg-center bg-cover rounded-t-md"
+        className="project-image w-full h-[50%] lg:h-[250px] bg-center bg-cover rounded-t-md"
         style={{ backgroundImage: `url(${bgImage})` }}
       ></div>
       <div className="project-overlay h-[60px] flex flex-row justify-center items-center">
