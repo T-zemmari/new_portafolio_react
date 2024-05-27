@@ -43,6 +43,7 @@ import {
   facebook2,
   linkdin2,
   github3,
+  proyectoMarketStoreApiImg
 } from "./assets/imgs";
 
 export const miNombre = "Tarek";
@@ -436,6 +437,18 @@ const proyectos = [
   {
     id: 1,
     private: false,
+    title: "MarketStoreApi",
+    content:
+      "MarketStoreApi es una potente API para gestionar productos, clientes, categorías y pedidos en una tienda en línea, desarrollada con Laravel 10. Utiliza Breeze para autenticación y Tailwind CSS para estilos.",
+    backgroundImage: proyectoMarketStoreApiImg,
+    sourceCodeLink: "https://github.com/T-zemmari/market_store_api.git",
+    sourceDeploy: "",
+    iconDeploy: watching,
+    icon: github1,
+  },
+  {
+    id: 2,
+    private: false,
     title: "Css Utils",
     content:
       "CSS Utils: Aplicación en React + Tailwind para generar propiedades CSS personalizadas como sombras de caja y fondos ondulados.",
@@ -446,7 +459,7 @@ const proyectos = [
     icon: github1,
   },
   {
-    id: 2,
+    id: 3,
     private: false,
     title: "TGG",
     content:
@@ -458,7 +471,7 @@ const proyectos = [
     icon: github1,
   },
   {
-    id: 3,
+    id: 4,
     private: false,
     title: "MyUtils",
     content:

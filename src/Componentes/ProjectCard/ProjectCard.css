@@ -5,3 +5,17 @@
   font-weight: 700;
   font-style: normal;
 }
+
+.project-card-container {
+  transition: margin-bottom 0.3s ease-in-out;
+}
+
+.project-card-container.expanded {
+  margin-bottom: 180px;
+}
+
+@media (max-width:760px){
+  .project-card-container.expanded {
+    margin-bottom: 20px;
+  }
+}

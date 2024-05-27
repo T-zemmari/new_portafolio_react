@@ -54,6 +54,7 @@ import proyectoCssUtils from "../imgs/proyectos/landing_bg_3.png";
 import proyectoTmEscapade from "../imgs/proyectos/tm_escapade_1.png";
 import proyectoMyUtilsImg from "../imgs/proyectos/unir_pdfs_1.png";
 import watching from "../imgs/watching_1.png";
+import proyectoMarketStoreApiImg from "../imgs/proyectos/api_market_store_1.png";
 
 import facebook from "../imgs/facebook_1.png";
 import linkdin from "../imgs/linkedin_4.png";
@@ -113,6 +114,7 @@ export {
   proyectoCssUtils,
   proyectoTmEscapade,
   proyectoMyUtilsImg,
+  proyectoMarketStoreApiImg,
   watching,
   facebook,
   linkdin,
